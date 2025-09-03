@@ -211,11 +211,12 @@ html, body { overflow-x: hidden; }
   }
 
   /* Keep open while entering/moving inside (CSS side) */
-  .menu > li:hover > .submenu,
-  .menu > li:focus-within > .submenu,
-  .menu > li.hover-open > .submenu {    /* JS adds .hover-open with a tiny delay */
-    display: block !important;
-  }
+.menu > li:hover > .submenu,
+.menu > li:focus-within > .submenu,
+.menu > li > .submenu:hover {
+  display: block !important;
+}
+
 
   /* Nested flyouts overlap by 1px to remove seam */
   .submenu .has-submenu { position: relative; }
@@ -248,6 +249,7 @@ html, body { overflow-x: hidden; }
 @media (max-width: 420px) {
   .menu a, .submenu-toggle { padding: 10px 12px; }
 }
+
 
 
 
