@@ -1,176 +1,23 @@
-/* ===== Base layout ===== */
-body {
-  font-family: Georgia, serif;
-  margin: 0;
-  padding: 0;
-  background: #f9f9f9;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  align-items: center;
-}
-
-header {
-  width: 100%;
-  background: white;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  padding: 10px 0;
-  display: flex;
-  justify-content: center;
-}
-
-header img {
-  max-height: 200px;
-  height: auto;
-  width: auto;
-}
-
-main {
-  flex-grow: 1;
-  width: 100%;
-  max-width: 700px;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.site-title {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 2em;
-  font-weight: bold;
-  color: #333;
-}
-
-/* ===== Sections ===== */
-.video-section,
-.quiz-section,
-.statement-section,
-.about-section {
-  margin: 20px auto;
-  max-width: 100%;
-}
-
-.video-section { text-align: center; }
-
-.video-section iframe {
-  width: 100%;
-  max-width: 560px;
-  aspect-ratio: 16 / 9;
-  height: auto;
-  border: none;
-}
-
-.quiz-section {
-  background: white;
-  padding: 15px 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  text-align: left;
-}
-
-/* Quiz structure */
-.question {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 20px;
-  padding-left: 0;
-  width: 100%;
-}
-.question p { text-align: left; margin: 0 0 10px 0; width: 100%; }
-.options { margin-left: 0; display: grid; gap: 8px; }
-.options label {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 6px;
-  cursor: pointer;
-}
-
-/* Prevent sideways scroll on small screens */
-html, body { overflow-x: hidden; }
-
-/* ===== Mobile-first navigation (hamburger + accordions) ===== */
-.navbar {
-  width: 100%;
-  background: #333;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  padding: 10px 0;
-}
-
-.nav-toggle {
-  background: #007bff;
-  color: white;
-  border: 0;
-  padding: 10px 14px;
-  border-radius: 6px;
-  cursor: pointer;
-  margin: 0 12px;
-  font: inherit;
-}
-.nav-toggle:hover { background-color: #0056b3; }
-
-.menu, .submenu {
-  list-style: none;
-  margin: 10px 12px;
-  padding: 0;
-}
-
-.menu > li { margin: 6px 0; }
-
-.menu a, .submenu-toggle {
-  display: block;
-  width: 100%;
-  text-align: left;
-  text-decoration: none;
-  padding: 12px 16px;
-  border-radius: 6px;
-  font: inherit;
-  cursor: pointer;
-  box-sizing: border-box;
-}
-
-/* Top-level links (if any) */
-.menu a { color: white; background-color: #007bff; }
-.menu a:hover { background-color: #0056b3; }
-
-/* Buttons that open submenus (mobile) */
-.submenu-toggle { color: white; background: #444; border: 0; }
-.submenu li a { background: #444; }
-.submenu li a:hover { background: #666; }
-
-/* Collapsed state (controlled by JS) */
-.menu[data-collapsed] { display: none; }
-.submenu[data-collapsed] { display: none; }
-
-/* Icons row variant (Social) */
-.submenu.icons {
-  display: grid;
-  grid-auto-flow: column;
-  gap: 12px;
-  align-items: center;
-  padding: 12px 4px;
-}
-.submenu.icons li a { background: transparent; padding: 6px; }
-
-/* ===== Desktop enhancement with "open" class (grace period) ===== */
+/* ===== Desktop nav: no-gap + stable hover ===== */
 @media (min-width: 900px) {
   .nav-toggle { display: none; }
 
   .menu {
-    display: flex !important;          /* menu visible on desktop */
+    display: flex !important;
     justify-content: center;
     align-items: center;
     gap: 10px;
     margin: 10px;
   }
 
+  /* The LI is the hover anchor; no margins/padding that create seams */
   .menu > li {
+    position: relative;
     margin: 0;
-    position: relative;                /* anchor for dropdown positioning */
+    padding: 0;
   }
 
-  /* Top-level pills */
+  /* Top-level pills: no bottom margin (keeps them flush with submenu) */
   .menu > li > .submenu-toggle,
   .menu > li > a {
     display: inline-block;
@@ -181,15 +28,17 @@ html, body { overflow-x: hidden; }
     padding: 12px 18px;
     border-radius: 6px;
     white-space: nowrap;
+    margin: 0;               /* <- important: no gap maker */
   }
   .menu > li > .submenu-toggle:hover,
   .menu > li > a:hover { background: #0056b3; }
 
-  /* Dropdowns: no gap; hidden until .open or focus-within */
+  /* Submenus TOUCH the trigger (no vertical gap) */
   .submenu {
     position: absolute;
-    top: 100%;
+    top: 100%;               /* <- make it touch the bottom of the LI */
     left: 0;
+    margin-top: 0;           /* <- ensure no gap from margins */
     min-width: 220px;
     background: #444;
     border-radius: 8px;
@@ -199,22 +48,32 @@ html, body { overflow-x: hidden; }
     z-index: 9999;
   }
 
-  /* Show submenu while item has .open (JS) or when keyboard focusing */
-  .menu > li.open > .submenu,
-  .menu > li:focus-within > .submenu { display: block; }
+  /* Keep submenu open while:
+     - hovering the parent LI,
+     - keyboard focusing inside,
+     - OR hovering the submenu itself (the crucial bit). */
+  .menu > li:hover > .submenu,
+  .menu > li:focus-within > .submenu,
+  .menu > li > .submenu:hover {
+    display: block !important;
+  }
 
-  /* Nested flyouts: same open/focus rules */
+  /* Nested submenus: also TOUCH their parent and stay open on hover */
   .submenu .has-submenu { position: relative; }
   .submenu .has-submenu > .submenu {
     top: 0;
-    left: calc(100% - 1px);
+    left: 100%;              /* sits flush to the right edge */
+    margin-left: 0;          /* no horizontal gap */
     min-width: 220px;
     display: none;
   }
-  .submenu .has-submenu.open > .submenu,
-  .submenu .has-submenu:focus-within > .submenu { display: block; }
+  .submenu .has-submenu:hover > .submenu,
+  .submenu .has-submenu:focus-within > .submenu,
+  .submenu .has-submenu > .submenu:hover {
+    display: block !important;
+  }
 
-  /* Desktop submenu item sizing */
+  /* Desktop submenu items look */
   .submenu li a,
   .submenu li .submenu-toggle {
     width: 100%;
@@ -224,15 +83,12 @@ html, body { overflow-x: hidden; }
     border-radius: 0;
     background: #444;
     color: #fff;
+    margin: 0;               /* avoid accidental seams */
   }
   .submenu li a:hover,
   .submenu li .submenu-toggle:hover { background: #666; }
 }
 
-/* Tiny devices tweaks */
-@media (max-width: 420px) {
-  .menu a, .submenu-toggle { padding: 10px 12px; }
-}
 
 
 
