@@ -153,12 +153,12 @@ html, body { overflow-x: hidden; }
 }
 .submenu.icons li a { background: transparent; padding: 6px; }
 
-/* ===== Desktop enhancement & hover stability for ALL top buttons ===== */
+/* ===== Desktop enhancement with "open" class (grace period) ===== */
 @media (min-width: 900px) {
   .nav-toggle { display: none; }
 
   .menu {
-    display: flex !important;          /* menu always visible on desktop */
+    display: flex !important;          /* menu visible on desktop */
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -170,17 +170,7 @@ html, body { overflow-x: hidden; }
     position: relative;                /* anchor for dropdown positioning */
   }
 
-  /* Hover bridge: extend hover area 10px below the pill so the cursor never "falls through" */
-  .menu > li::after {
-    content: "";
-    position: absolute;
-    left: 0; right: 0; top: 100%;
-    height: 10px;
-    background: transparent;
-    pointer-events: auto;              /* keeps :hover true while crossing the seam */
-  }
-
-  /* Show ALL top-level labels as blue pills */
+  /* Top-level pills */
   .menu > li > .submenu-toggle,
   .menu > li > a {
     display: inline-block;
@@ -195,7 +185,7 @@ html, body { overflow-x: hidden; }
   .menu > li > .submenu-toggle:hover,
   .menu > li > a:hover { background: #0056b3; }
 
-  /* Dropdowns: no gap + high z-index */
+  /* Dropdowns: no gap; hidden until .open or focus-within */
   .submenu {
     position: absolute;
     top: 100%;
@@ -207,18 +197,13 @@ html, body { overflow-x: hidden; }
     padding: 6px 0;
     display: none;
     z-index: 9999;
-    margin-top: 0;
   }
 
-  /* Keep open while entering/moving inside (CSS side) */
-.menu > li:hover > .submenu,
-.menu > li:focus-within > .submenu,
-.menu > li > .submenu:hover {
-  display: block !important;
-}
+  /* Show submenu while item has .open (JS) or when keyboard focusing */
+  .menu > li.open > .submenu,
+  .menu > li:focus-within > .submenu { display: block; }
 
-
-  /* Nested flyouts overlap by 1px to remove seam */
+  /* Nested flyouts: same open/focus rules */
   .submenu .has-submenu { position: relative; }
   .submenu .has-submenu > .submenu {
     top: 0;
@@ -226,9 +211,8 @@ html, body { overflow-x: hidden; }
     min-width: 220px;
     display: none;
   }
-  .submenu .has-submenu:hover > .submenu,
-  .submenu .has-submenu:focus-within > .submenu,
-  .submenu .has-submenu.hover-open > .submenu { display: block; }
+  .submenu .has-submenu.open > .submenu,
+  .submenu .has-submenu:focus-within > .submenu { display: block; }
 
   /* Desktop submenu item sizing */
   .submenu li a,
@@ -249,8 +233,6 @@ html, body { overflow-x: hidden; }
 @media (max-width: 420px) {
   .menu a, .submenu-toggle { padding: 10px 12px; }
 }
-
-
 
 
 
