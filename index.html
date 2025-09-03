@@ -9,7 +9,7 @@
 
   <link rel="icon" href="favicon2.ico?v=2">
   <link rel="apple-touch-icon" href="Images/apple-touch-icon.png" sizes="180x180" />
-  <link rel="stylesheet" href="style.css?v=hamburger-3" />
+  <link rel="stylesheet" href="style.css?v=hamburger-4" />
 </head>
 
 <body>
@@ -213,7 +213,7 @@
     </div>
   </footer>
 
-  <!-- Tiny, robust JS for toggling -->
+  <!-- Tiny JS: mobile toggles + desktop hover grace (prevents flicker) -->
   <script>
     (function () {
       const navToggle = document.querySelector('.nav-toggle');
@@ -227,7 +227,7 @@
         });
       }
 
-      // Delegate submenu toggles
+      // Submenu toggles (mobile accordion)
       document.addEventListener('click', (e) => {
         const btn = e.target.closest('.submenu-toggle');
         if (!btn) return;
@@ -239,17 +239,46 @@
         btn.setAttribute('aria-expanded', String(!open));
         submenu.toggleAttribute('data-collapsed');
       });
+
+      // Desktop hover stability: brief delay so the cursor can cross any tiny gap
+      const mql = window.matchMedia('(min-width: 900px)');
+      const closeTimers = new WeakMap();
+
+      function bindDesktopHover() {
+        document.querySelectorAll('.menu > li.has-submenu').forEach((li) => {
+          const submenu = li.querySelector(':scope > .submenu');
+          if (!submenu) return;
+
+          li.addEventListener('mouseenter', () => {
+            clearTimeout(closeTimers.get(li));
+            li.classList.add('hover-open');
+          });
+          li.addEventListener('mouseleave', () => {
+            const t = setTimeout(() => li.classList.remove('hover-open'), 180);
+            closeTimers.set(li, t);
+          });
+
+          submenu.addEventListener('mouseenter', () => {
+            clearTimeout(closeTimers.get(li));
+            li.classList.add('hover-open');
+          });
+          submenu.addEventListener('mouseleave', () => {
+            const t = setTimeout(() => li.classList.remove('hover-open'), 180);
+            closeTimers.set(li, t);
+          });
+        });
+      }
+
+      if (mql.matches) bindDesktopHover();
+      mql.addEventListener('change', (e) => {
+        // clear classes when switching modes
+        document.querySelectorAll('.menu > li.hover-open').forEach(li => li.classList.remove('hover-open'));
+        if (e.matches) bindDesktopHover();
+      });
     })();
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
 
 
 
