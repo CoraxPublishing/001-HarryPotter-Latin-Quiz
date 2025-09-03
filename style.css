@@ -110,8 +110,7 @@ html, body { overflow-x: hidden; }
 }
 .nav-toggle:hover { background-color: #0056b3; }
 
-.menu,
-.submenu {
+.menu, .submenu {
   list-style: none;
   margin: 10px 12px;
   padding: 0;
@@ -119,8 +118,7 @@ html, body { overflow-x: hidden; }
 
 .menu > li { margin: 6px 0; }
 
-.menu a,
-.submenu-toggle {
+.menu a, .submenu-toggle {
   display: block;
   width: 100%;
   text-align: left;
@@ -133,18 +131,11 @@ html, body { overflow-x: hidden; }
 }
 
 /* Top-level links (if any) */
-.menu a {
-  color: white;
-  background-color: #007bff;
-}
+.menu a { color: white; background-color: #007bff; }
 .menu a:hover { background-color: #0056b3; }
 
 /* Buttons that open submenus (mobile) */
-.submenu-toggle {
-  color: white;
-  background: #444;
-  border: 0;
-}
+.submenu-toggle { color: white; background: #444; border: 0; }
 .submenu li a { background: #444; }
 .submenu li a:hover { background: #666; }
 
@@ -160,12 +151,9 @@ html, body { overflow-x: hidden; }
   align-items: center;
   padding: 12px 4px;
 }
-.submenu.icons li a {
-  background: transparent;
-  padding: 6px;
-}
+.submenu.icons li a { background: transparent; padding: 6px; }
 
-/* ===== Desktop enhancement & hover stability ===== */
+/* ===== Desktop enhancement & hover stability for ALL top buttons ===== */
 @media (min-width: 900px) {
   .nav-toggle { display: none; }
 
@@ -176,12 +164,13 @@ html, body { overflow-x: hidden; }
     gap: 10px;
     margin: 10px;
   }
+
   .menu > li {
     margin: 0;
     position: relative;                /* anchor for dropdown positioning */
   }
 
-  /* Show top-level labels as blue pills on desktop */
+  /* Show ALL top-level labels (ABOUT, LATIN, ENGLISH, BOOKSTORE, CONTACTS) as blue pills */
   .menu > li > .submenu-toggle {
     display: inline-block;
     width: auto;
@@ -194,19 +183,22 @@ html, body { overflow-x: hidden; }
   }
   .menu > li > .submenu-toggle:hover { background: #0056b3; }
 
-  /* Top-level anchors keep the same look */
+  /* Top-level anchors keep the same pill look (if present) */
   .menu > li > a {
     display: inline-block;
     width: auto;
     white-space: nowrap;
     padding: 12px 18px;
     border-radius: 6px;
+    background: #007bff;
+    color: #fff;
   }
+  .menu > li > a:hover { background: #0056b3; }
 
-  /* Dropdowns: NO GAP (prevents flicker) */
+  /* Dropdowns: NO GAP (prevents flicker) and stay open while entering */
   .submenu {
     position: absolute;
-    top: 100%;                          /* was calc(100% + 6px) */
+    top: 100%;
     left: 0;
     min-width: 220px;
     background: #444;
@@ -218,25 +210,22 @@ html, body { overflow-x: hidden; }
     margin-top: 0;
   }
 
-  /* Keep open while moving into the submenu */
   .menu > li:hover > .submenu,
   .menu > li:focus-within > .submenu,
   .menu > li > .submenu:hover {
     display: block !important;
   }
 
-  /* Nested flyouts: slight overlap to avoid seam */
+  /* Nested flyouts: slight overlap so pointer never slips through */
   .submenu .has-submenu { position: relative; }
   .submenu .has-submenu > .submenu {
     top: 0;
-    left: calc(100% - 1px);             /* overlap 1px so pointer never slips */
+    left: calc(100% - 1px);
     min-width: 220px;
     display: none;
   }
   .submenu .has-submenu:hover > .submenu,
-  .submenu .has-submenu:focus-within > .submenu {
-    display: block;
-  }
+  .submenu .has-submenu:focus-within > .submenu { display: block; }
 
   /* Desktop submenu item sizing */
   .submenu li a,
