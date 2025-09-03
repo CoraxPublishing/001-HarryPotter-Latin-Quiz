@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Patreon — Corax Publishing</title>
+  <link rel="stylesheet" href="/style.css" />
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, Noto Sans; line-height: 1.6; color: #111; }
+    .wrap { max-width: 820px; margin: 0 auto; padding: 24px 16px 40px; }
+    .logo { display: block; width: 240px; height: auto; margin: 8px auto 20px; }
+    h1 { font-size: clamp(1.5rem, 2.2vw + 1rem, 2.2rem); margin: 0 0 12px; text-align: center; }
+    .note { color:#444; margin: 0 0 16px; text-align:center; }
+    .card { border: 1.5px solid #ddd; border-radius: 12px; padding: 16px; background: #fff; }
+    .actions { text-align:center; margin-top: 16px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+    .btn {
+      display:inline-block; padding:.7rem 1rem; border:2px solid #111; border-radius:999px;
+      font-weight:700; background:transparent; text-decoration:none; cursor:pointer;
+    }
+    .btn:hover { opacity:.85; }
+  </style>
+</head>
+<body>
+  <main class="wrap" role="main">
+    <!-- Company logo -->
+    <img src="Images/Corax-Publishing-Logo.jpg" alt="Company Logo" class="logo" />
+
+    <h1>Support Us on Patreon</h1>
+    <p class="note">Your support helps us create new comic-style lessons, narrated videos, and interactive quizzes—keeping them free for everyone.</p>
+
+    <section class="card" aria-label="Patreon info">
+      <p>Every pledge—big or small—goes directly into producing more Latin & English learning materials and releasing free offers.</p>
+      <div class="actions">
+        <!-- Replace YOUR_PAGE with your Patreon page (e.g., CoraxPublishing) -->
+        <a class="btn" href="https://www.patreon.com/YOUR_PAGE" target="_blank" rel="noopener">Open Patreon</a>
+        <a class="btn" href="#" onclick="history.length ? history.back() : (location.href='/'); return false;">Back</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Email</title>
+  <!-- Link your site stylesheet; adjust path if needed -->
+  <link rel="stylesheet" href="/style.css" />
+  
+  <!-- Minimal fallback styles (your style.css can override) -->
+  <style>
+    :root { --gap: 16px; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, Noto Sans; }
+    .wrap { min-height: 100svh; display: grid; place-items: center; padding: 48px 16px; }
+    .card { max-width: 720px; width: 100%; text-align: center; }
+    h1 { font-size: clamp(1.75rem, 2vw + 1rem, 2.5rem); margin: 0 0 .75rem; font-weight: 800; }
+    p { margin: 0 0 1rem; color: #333; }
+    .actions { display: flex; gap: var(--gap); justify-content: center; flex-wrap: wrap; margin-top: 8px; }
+    .btn { display: inline-block; padding: .75rem 1rem; border-radius: 999px; border: 2px solid #111; background: transparent; font-weight: 700; text-decoration: none; }
+    .btn:hover { opacity: .85; }
+    .copybox { display: grid; grid-template-columns: 1fr auto; gap: 8px; align-items: center; margin-top: var(--gap); }
+    .copybox input { width: 100%; padding: .6rem .75rem; border: 1.5px solid #aaa; border-radius: .75rem; font-size: 1rem; }
+    .copybox button { padding: .6rem .9rem; border-radius: .75rem; border: 2px solid #111; background: transparent; font-weight: 700; cursor: pointer; }
+    .back { margin-top: 24px; display: inline-block; text-decoration: none; }
+    /* added for logo */
+    .logo { display: block; margin: 0 auto 1rem; width: 240px; height: auto; }
+  </style>
+</head>
+<body>
+  <main class="wrap" role="main">
+    <section class="card" aria-labelledby="title">
+
+      <!-- Company logo (centered, ~240px wide) -->
+      <img src="Images/Corax-Publishing-Logo.jpg" alt="Company Logo" class="logo" />
+
+      <h1 id="title">Get in touch</h1>
+      <p>Use the button to open your mail app, or copy the address below.</p>
+
+      <!-- Mailto button -->
+      <div class="actions">
+        <a class="btn" href="mailto:ravencorax@protonmail.com" aria-label="Email ravencorax@protonmail.com">Email me</a>
+      </div>
+
+      <!-- Plain address with copy-to-clipboard -->
+      <div class="copybox" aria-live="polite">
+        <input id="addr" type="text" value="ravencorax@protonmail.com" readonly aria-label="Email address" />
+        <button id="copyBtn" type="button" aria-label="Copy email address">Copy</button>
+      </div>
+
+      <a class="back" href="#" onclick="history.length ? history.back() : (location.href='/'); return false;">← Back</a>
+    </section>
+  </main>
+
+  <script>
+    (function(){
+      const btn = document.getElementById('copyBtn');
+      const inp = document.getElementById('addr');
+      btn.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(inp.value);
+          const prev = btn.textContent;
+          btn.textContent = 'Copied!';
+          setTimeout(() => btn.textContent = prev, 1200);
+        } catch (e) {
+          // Fallback if clipboard API is unavailable
+          inp.select();
+          document.execCommand && document.execCommand('copy');
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FAQ — Corax Publishing</title>
+  <!-- Optional: link your site stylesheet -->
+  <link rel="stylesheet" href="/style.css" />
+
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, Noto Sans; line-height: 1.6; color: #111; }
+    .wrap { max-width: 820px; margin: 0 auto; padding: 24px 16px 40px; }
+    .logo { display: block; width: 240px; height: auto; margin: 8px auto 20px; }
+    h1 { font-size: clamp(1.5rem, 2.2vw + 1rem, 2.2rem); margin: 0 0 16px; text-align: center; }
+
+    /* FAQ accordions using <details> (no JS needed) */
+    .faq details { border: 1.5px solid #ddd; border-radius: 10px; padding: 0; margin: 10px 0; background: #fff; }
+    .faq summary {
+      list-style: none; cursor: pointer; padding: 14px 16px; font-weight: 700;
+      outline: none; user-select: none;
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq details[open] summary { border-bottom: 1px solid #eee; }
+    .faq .answer { padding: 14px 16px; }
+    .muted { color: #444; }
+
+    .btn-back {
+      display: inline-block; margin-top: 16px; padding: .6rem .9rem;
+      border: 2px solid #111; border-radius: 999px; background: transparent;
+      font-weight: 700; text-decoration: none; cursor: pointer;
+    }
+    .btn-back:hover { opacity: .85; }
+
+    /* Improve touch targets on mobile */
+    @media (pointer: coarse) {
+      .faq summary { padding: 16px 18px; }
+      .faq .answer { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap" role="main">
+    <!-- Company logo (centered, ~240px wide) -->
+    <img src="Images/Corax-Publishing-Logo.jpg" alt="Company Logo" class="logo" />
+
+    <h1>Frequently Asked Questions</h1>
+
+    <section class="faq" aria-label="FAQ list">
+
+      <details>
+        <summary>Does it cost to use your materials?</summary>
+        <div class="answer">
+          <p>No subscriptions and no fees. All videos and interactive quizzes are free to access.</p>
+          <p class="muted">Want to help? Please <strong>like, share, and subscribe</strong> on our channels (YouTube, Facebook, etc.). It makes a real difference.</p>
+          <p>Optional purchases include companion e-books and print editions available via Amazon Kindle. You can also support our work on Patreon, and our Offers page announces monthly free Kindle e-book promotions for email subscribers.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>How do you support independent authors?</summary>
+        <div class="answer">
+          <p>We periodically feature independent authors whose work aligns with our focus—original Latin stories, resources for learners of Latin and English, and topics such as Mythology and the Classical world. We may also consider <strong>Tolkien-style fantasy</strong>, <strong>romance with classical themes</strong>, and <strong>political satire</strong> when the fit is right. Featured authors receive a brief bio and links on our platform.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>How can I be featured (link and author bio)?</summary>
+        <div class="answer">
+          <p>Send a short query via our Contact page or email <strong>ravencorax@protonmail.com</strong>. Include a summary, intended audience/level, and sample pages or a link to your published work. We aim to reply within <strong>30 days</strong>. Final selection depends on editorial fit and availability.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Do I need previous experience?</summary>
+        <div class="answer">
+          <p>No. Our materials serve <strong>absolute beginners through advanced learners</strong>. Latin videos use Latin narration with friendly English support; ESL videos are in clear English. Everything is built around learning by context.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>What makes your approach different?</summary>
+        <div class="answer">
+          <p>We teach through a <strong>comic / graphic-novel format</strong>—panels, speech bubbles, and vivid scenes—paired with the <strong>natural method</strong> (learn through stories and context). Every lesson includes an <strong>interactive MCQ</strong> to check understanding immediately.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Who are your resources for?</summary>
+        <div class="answer">
+          <p>Teachers, students, and self-learners. Our materials work well in classrooms, study groups, and independent study.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Can I use your videos and quizzes in my class?</summary>
+        <div class="answer">
+          <p>Yes—feel free to link or stream them for educational use. For printing, redistributing, or adapting our materials, please contact us for permission.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Where can I get your books?</summary>
+        <div class="answer">
+          <p>Companion e-books and print editions are available on <strong>Amazon Kindle</strong> (links provided on our site). We announce <strong>monthly free Kindle e-book</strong> offers to first-time email subscribers.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>How do I stay updated?</summary>
+        <div class="answer">
+          <p>Subscribe to our newsletter on the site, check the Offers page, or follow our announcements. Patreon supporters also receive updates.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Technical requirements</summary>
+        <div class="answer">
+          <p>Any modern browser on desktop or mobile. Audio is recommended for narrated videos. No account is required to watch videos or take quizzes.</p>
+        </div>
+      </details>
+
+    </section>
+
+    <div style="text-align:center;">
+      <a class="btn-back" href="#" onclick="history.length ? history.back() : (location.href='/'); return false;">← Back</a>
+    </div>
+  </main>
+</body>
+</html>

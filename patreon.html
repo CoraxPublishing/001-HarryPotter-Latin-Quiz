@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Support Corax — Patreon (Coming Soon)</title>
+  <link rel="stylesheet" href="/style.css" />
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, Noto Sans; line-height: 1.6; color: #111; }
+    .wrap { max-width: 820px; margin: 0 auto; padding: 24px 16px 40px; }
+    .logo { display:block; width:240px; height:auto; margin:8px auto 20px; }
+    h1 { text-align:center; font-size: clamp(1.5rem, 2.2vw + 1rem, 2.2rem); margin:0 0 12px; }
+    .card { border:1.5px solid #ddd; border-radius:12px; padding:16px; background:#fff; }
+    .note { color:#444; margin:0 0 12px; text-align:center; }
+    .actions { text-align:center; margin-top:16px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+    .btn { display:inline-block; padding:.7rem 1rem; border:2px solid #111; border-radius:999px; font-weight:700; background:transparent; text-decoration:none; cursor:pointer; }
+    .btn:hover { opacity:.85; }
+    .signup { display:grid; grid-template-columns: 1fr auto; gap:8px; align-items:center; margin-top:12px; }
+    .signup input { width:100%; padding:.6rem .75rem; border:1.5px solid #aaa; border-radius:.6rem; font-size:1rem; }
+  </style>
+</head>
+<body>
+  <main class="wrap" role="main">
+    <img src="Images/Corax-Publishing-Logo.jpg" alt="Company Logo" class="logo" />
+
+    <h1>Patreon — Coming Soon</h1>
+    <p class="note">Patreon isn’t accessible from our current location. If you’d like a ping when it’s live, drop your email below.</p>
+
+    <section class="card" aria-label="Notify me">
+      <!-- Replace YOUR_ENDPOINT with your Formspree form ID -->
+      <form action="https://formspree.io/f/YOUR_ENDPOINT" method="POST" class="notify-form">
+        <div class="signup">
+          <input type="email" name="email" required placeholder="Your email" autocomplete="email" aria-label="Email for Patreon notification">
+          <button class="btn" type="submit">Notify Me</button>
+        </div>
+        <!-- helpful metadata for you -->
+        <input type="hidden" name="_subject" value="Patreon interest — Corax Publishing">
+        <input type="hidden" name="interest" value="patreon">
+        <!-- Optional redirect: if a thank-you page sits in the same folder, keep this -->
+        <input type="hidden" name="_redirect" value="thank-you.html">
+        <!-- Honeypot -->
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+        <p class="note" style="margin-top:8px;">We’ll email once Patreon is active (or share an alternative way to support).</p>
+      </form>
+    </section>
+
+    <div class="actions">
+      <a class="btn" href="index.html">Back</a>
+      <a class="btn" href="newsletter.html">Newsletter</a>
+    </div>
+  </main>
+</body>
+</html>

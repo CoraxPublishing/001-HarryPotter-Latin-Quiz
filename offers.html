@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Offers — Corax Publishing</title>
+  <link rel="stylesheet" href="/style.css" />
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, Noto Sans; line-height: 1.6; color: #111; }
+    .wrap { max-width: 820px; margin: 0 auto; padding: 24px 16px 40px; }
+    .logo { display: block; width: 240px; height: auto; margin: 8px auto 20px; }
+    h1 { font-size: clamp(1.5rem, 2.2vw + 1rem, 2.2rem); margin: 0 0 16px; text-align: center; }
+    .video { position: relative; width: 100%; padding-bottom: 56.25%; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,.06); }
+    .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .card { border: 1.5px solid #ddd; border-radius: 12px; padding: 16px; margin-top: 16px; background: #fff; }
+    .btn-back { display: inline-block; margin-top: 16px; padding: .6rem .9rem; border: 2px solid #111; border-radius: 999px; background: transparent; font-weight: 700; text-decoration: none; cursor: pointer; }
+    .btn-back:hover { opacity: .85; }
+  </style>
+</head>
+<body>
+  <main class="wrap" role="main">
+    <!-- Company logo (centered, ~240px wide) -->
+    <img src="Images/Corax-Publishing-Logo.jpg" alt="Company Logo" class="logo" />
+
+    <h1>Current Offers</h1>
+
+    <!-- Promo video (YouTube) -->
+    <div class="video" aria-label="Promo video">
+      <iframe 
+        src="https://www.youtube.com/embed/eXSR8cLLRmc" 
+        title="Promo Video"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <!-- Offer details -->
+    <section class="card" aria-labelledby="offer-title">
+      <h2 id="offer-title" style="margin-top:0">September Offer</h2>
+      <p>This page is updated regularly as new material is released.</p>
+      <p><strong>For all subscribers in September 2025:</strong> New subscribers will be notified of the release date for a <strong>free</strong> copy of <em>The Adventures of Perseus</em> (Latin & English). The book will be made free on <strong>October 1, 2025</strong>.</p>
+      <p><strong>How to subscribe:</strong> Please use the <strong>Newsletter</strong> link in the <strong>main mast</strong> on the Home page.</p>
+    </section>
+
+    <div style="text-align:center;">
+      <a class="btn-back" href="#" onclick="history.length ? history.back() : (location.href='/'); return false;">← Back</a>
+    </div>
+  </main>
+</body>
+</html>
