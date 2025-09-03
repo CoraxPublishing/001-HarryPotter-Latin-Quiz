@@ -1,7 +1,7 @@
+/* ====== Base Layout ====== */
 body {
   font-family: Georgia, serif;
-
-  margin: 0; 
+  margin: 0;
   padding: 0;
   background: #f9f9f9;
   display: flex;
@@ -12,8 +12,8 @@ body {
 
 header {
   width: 100%;
-  background: white;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,.1);
   padding: 10px 0;
   display: flex;
   justify-content: center;
@@ -25,22 +25,6 @@ header img {
   width: auto;
 }
 
-nav {
-  width: 100%;
-  background: #333;
-  display: flex;
-  flex-direction: column; /* this stacks rows vertically */
-  align-items: center;     /* optional: centers the rows horizontally */
-  gap: 15px;
-  padding: 10px 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-
-nav button:hover {
-  background-color: #0056b3;
-}
-
 main {
   flex-grow: 1;
   width: 100%;
@@ -49,27 +33,33 @@ main {
   box-sizing: border-box;
 }
 
-.video-section,
-.quiz-section {
+/* ====== Sections ====== */
+.video-section {
   margin: 20px auto;
-  text-align: center;
+  text-align: center;              /* center video only */
   max-width: 100%;
 }
 
+.quiz-section {
+  margin: 20px auto;
+  max-width: 100%;
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.1);
+  text-align: left;                /* always left-align quiz content */
+}
+
+/* Responsive video with proper ratio */
 .video-section iframe {
   width: 100%;
   max-width: 560px;
-  height: 315px;
+  aspect-ratio: 16 / 9;
+  height: auto;
   border: none;
 }
 
-.quiz-section {
-  background: white;
-  padding: 15px 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-/* NEW: Style for Site Title */
+/* ====== Site Title ====== */
 .site-title {
   text-align: center;
   margin-top: 20px;
@@ -78,21 +68,32 @@ main {
   color: #333;
 }
 
-/* NEW: Navigation Menu Structure */
+/* ====== Navigation (Desktop-first) ====== */
+nav {
+  width: 100%;
+  background: #333;
+  display: flex;
+  flex-direction: column; /* stacks rows vertically (header area uses ul below) */
+  align-items: center;
+  gap: 15px;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,.2);
+}
+
 nav.navbar {
   background: #333;
   width: 100%;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 5px rgba(0,0,0,.2);
 }
 
 nav.navbar ul.menu {
-  list-style-type: none;
+  list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0 10px;
   display: flex;
   justify-content: center;
-  background-color: #333;
   flex-wrap: wrap;
+  gap: 10px;
 }
 
 nav.navbar ul.menu > li {
@@ -102,70 +103,77 @@ nav.navbar ul.menu > li {
 nav.navbar ul.menu > li > a {
   display: block;
   padding: 12px 18px;
-  color: white;
+  color: #fff;
   text-decoration: none;
   font-size: 1em;
   font-family: Georgia, serif;
   background-color: #007bff;
   border-radius: 4px;
-  margin: 5px;
-  transition: background-color 0.3s ease;
+  margin: 5px 0;
+  transition: background-color .2s ease;
+  white-space: nowrap;
 }
 
 nav.navbar ul.menu > li > a:hover {
   background-color: #0056b3;
 }
 
-/* NEW: Dropdown styling */
+/* ====== Dropdowns (Desktop) ====== */
 nav ul.menu li ul.dropdown {
-  list-style-type: none;
+  list-style: none;
   display: none;
   position: absolute;
-  top: 100%;
+  top: calc(100% + 6px);
   left: 0;
   background-color: #444;
-  padding: 0;
-  min-width: 180px;
+  padding: 6px 0;
+  min-width: 200px;
   z-index: 999;
+  border-radius: 6px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.2);
+  overflow: hidden;
 }
 
-nav ul.menu li:hover > ul.dropdown {
+nav ul.menu li:hover > ul.dropdown,
+nav ul.menu li:focus-within > ul.dropdown {
   display: block;
 }
 
-
-nav ul.menu li ul.dropdown li {
-  position: relative;
-}
+nav ul.menu li ul.dropdown li { position: relative; }
 
 nav ul.menu li ul.dropdown li a {
   display: block;
-  padding: 10px 15px;
+  padding: 10px 14px;
   background-color: #444;
-  color: white;
+  color: #fff;
   border-bottom: 1px solid #555;
   text-decoration: none;
-  font-size: 0.95em;
+  font-size: .95em;
   white-space: nowrap;
 }
-
 
 nav ul.menu li ul.dropdown li a:hover {
   background-color: #666;
 }
 
-/* NEW: Support nested dropdowns */
+/* Nested dropdowns on desktop */
 nav ul.menu li ul.dropdown li ul.dropdown {
+  display: none;
+  position: absolute;
   left: 100%;
   top: 0;
-  display: none;
+  min-width: 200px;
+  background: #444;
+  border-radius: 6px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.2);
 }
 
-nav ul.menu li ul.dropdown li:hover > ul.dropdown {
-  display: flex;
+nav ul.menu li ul.dropdown li:hover > ul.dropdown,
+nav ul.menu li ul.dropdown li:focus-within > ul.dropdown {
+  display: block;
 }
 
-/* Wrapper for each question block */
+/* ====== Quiz structure ====== */
 .question {
   display: flex;
   flex-direction: column;
@@ -182,7 +190,7 @@ nav ul.menu li ul.dropdown li:hover > ul.dropdown {
 }
 
 .options {
-  margin-left: 20px; /* controls indentation of the options under the question */
+  margin-left: 20px; /* indentation of the options under the question */
 }
 
 .options label {
@@ -192,6 +200,66 @@ nav ul.menu li ul.dropdown li:hover > ul.dropdown {
   margin-bottom: 6px;
   cursor: pointer;
 }
+
+/* ====== Mobile Portrait Fixes (core of the problem) ====== */
+@media (max-width: 680px) and (orientation: portrait) {
+  html, body { overflow-x: hidden; }
+
+  /* Menu items stack; links fill width */
+  nav.navbar ul.menu {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding: 0 12px 8px;
+  }
+  nav.navbar ul.menu > li { width: 100%; }
+  nav.navbar ul.menu > li > a {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    white-space: normal;           /* allow wrapping so buttons don’t overflow */
+  }
+
+  /* Dropdowns become in-flow, full-width, and scroll if tall (no off-screen spill) */
+  nav ul.menu li ul.dropdown,
+  nav ul.menu li ul.dropdown li ul.dropdown {
+    position: static;
+    display: none;                 /* shown on hover/focus tap below */
+    width: 100%;
+    max-height: 60svh;
+    overflow-y: auto;
+    box-shadow: none;
+    border-radius: 6px;
+    margin-top: 6px;
+    padding: 6px 0;
+  }
+
+  /* On touch, first tap often counts as hover; also enable focus-within */
+  nav ul.menu li:hover > ul.dropdown,
+  nav ul.menu li:focus-within > ul.dropdown,
+  nav ul.menu li ul.dropdown li:hover > ul.dropdown,
+  nav ul.menu li ul.dropdown li:focus-within > ul.dropdown {
+    display: block;
+  }
+
+  /* Ensure dropdown items wrap and are easy to tap */
+  nav ul.menu li ul.dropdown li a {
+    white-space: normal;
+    line-height: 1.35;
+    padding: 10px 14px;
+  }
+
+  /* Quiz: keep layout tidy on small screens */
+  .quiz-section { padding: 14px 16px; }
+  .question { padding-left: 0; }
+  .options { margin-left: 0; display: grid; gap: 8px; }
+}
+
+/* (Optional but harmless) Narrow phones in either orientation */
+@media (max-width: 420px) {
+  nav.navbar ul.menu > li > a { font-size: .95em; padding: 10px 14px; }
+}
+
 
 
 
