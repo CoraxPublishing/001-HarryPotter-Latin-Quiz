@@ -110,7 +110,8 @@ html, body { overflow-x: hidden; }
 }
 .nav-toggle:hover { background-color: #0056b3; }
 
-.menu, .submenu {
+.menu,
+.submenu {
   list-style: none;
   margin: 10px 12px;
   padding: 0;
@@ -131,7 +132,7 @@ html, body { overflow-x: hidden; }
   box-sizing: border-box;
 }
 
-/* Top-level links (when present) */
+/* Top-level links (if any) */
 .menu a {
   color: white;
   background-color: #007bff;
@@ -164,12 +165,12 @@ html, body { overflow-x: hidden; }
   padding: 6px;
 }
 
-/* ===== Desktop enhancement ===== */
+/* ===== Desktop enhancement & hover stability ===== */
 @media (min-width: 900px) {
   .nav-toggle { display: none; }
 
   .menu {
-    display: flex !important;      /* menu always visible on desktop */
+    display: flex !important;          /* menu always visible on desktop */
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -177,14 +178,13 @@ html, body { overflow-x: hidden; }
   }
   .menu > li {
     margin: 0;
-    position: relative;            /* anchor for dropdown positioning */
+    position: relative;                /* anchor for dropdown positioning */
   }
 
-  /* IMPORTANT FIX:
-     Show top-level labels as blue "pills" on desktop (they were hidden before). */
+  /* Show top-level labels as blue pills on desktop */
   .menu > li > .submenu-toggle {
-    display: inline-block;         /* make the button visible */
-    width: auto;                   /* not full-width on desktop */
+    display: inline-block;
+    width: auto;
     background: #007bff;
     color: #fff;
     border: 0;
@@ -194,7 +194,7 @@ html, body { overflow-x: hidden; }
   }
   .menu > li > .submenu-toggle:hover { background: #0056b3; }
 
-  /* Any top-level anchor keeps the same pill look */
+  /* Top-level anchors keep the same look */
   .menu > li > a {
     display: inline-block;
     width: auto;
@@ -203,10 +203,10 @@ html, body { overflow-x: hidden; }
     border-radius: 6px;
   }
 
-  /* Dropdowns */
+  /* Dropdowns: NO GAP (prevents flicker) */
   .submenu {
     position: absolute;
-    top: calc(100% + 6px);
+    top: 100%;                          /* was calc(100% + 6px) */
     left: 0;
     min-width: 220px;
     background: #444;
@@ -215,22 +215,28 @@ html, body { overflow-x: hidden; }
     padding: 6px 0;
     display: none;
     z-index: 999;
+    margin-top: 0;
   }
 
-  /* Reveal dropdowns on hover/focus */
+  /* Keep open while moving into the submenu */
   .menu > li:hover > .submenu,
-  .menu > li:focus-within > .submenu { display: block !important; }
+  .menu > li:focus-within > .submenu,
+  .menu > li > .submenu:hover {
+    display: block !important;
+  }
 
-  /* Nested flyouts on desktop */
+  /* Nested flyouts: slight overlap to avoid seam */
   .submenu .has-submenu { position: relative; }
   .submenu .has-submenu > .submenu {
     top: 0;
-    left: 100%;
+    left: calc(100% - 1px);             /* overlap 1px so pointer never slips */
     min-width: 220px;
     display: none;
   }
   .submenu .has-submenu:hover > .submenu,
-  .submenu .has-submenu:focus-within > .submenu { display: block; }
+  .submenu .has-submenu:focus-within > .submenu {
+    display: block;
+  }
 
   /* Desktop submenu item sizing */
   .submenu li a,
@@ -251,6 +257,7 @@ html, body { overflow-x: hidden; }
 @media (max-width: 420px) {
   .menu a, .submenu-toggle { padding: 10px 12px; }
 }
+
 
 
 
