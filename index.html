@@ -1,289 +1,238 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+/* ===== Base layout ===== */
+body {
+  font-family: Georgia, serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+}
 
-  <title>Corax Publishing — Comic-Style Latin & English Lessons</title>
-  <meta name="description" content="Learn Latin and English through comic-style stories: free narrated videos, interactive quizzes, and companion e-books. Beginners welcome." />
+header {
+  width: 100%;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+}
 
-  <link rel="icon" href="favicon2.ico?v=2">
-  <link rel="apple-touch-icon" href="Images/apple-touch-icon.png" sizes="180x180" />
-  <link rel="stylesheet" href="style.css?v=hamburger-4" />
-</head>
+header img {
+  max-height: 200px;
+  height: auto;
+  width: auto;
+}
 
-<body>
-  <!-- Site Title -->
-  <div class="site-title">
-    <h1>Corax Publishing</h1>
-  </div>
+main {
+  flex-grow: 1;
+  width: 100%;
+  max-width: 700px;
+  padding: 20px;
+  box-sizing: border-box;
+}
 
-  <!-- Mast Image -->
-  <header>
-    <img src="Images/Corax-Publishing-Logo.jpg" alt="Company Logo" />
-  </header>
+.site-title {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 2em;
+  font-weight: bold;
+  color: #333;
+}
 
-  <!-- Mobile-first, accessible navigation -->
-  <nav class="navbar" aria-label="Primary">
-    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">☰ Menu</button>
+/* ===== Sections ===== */
+.video-section,
+.quiz-section,
+.statement-section,
+.about-section {
+  margin: 20px auto;
+  max-width: 100%;
+}
 
-    <ul id="nav-menu" class="menu" data-collapsed>
-      <!-- ABOUT -->
-      <li class="has-submenu">
-        <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-about">ABOUT</button>
-        <ul id="submenu-about" class="submenu" data-collapsed>
-          <li><a href="#about">Overview</a></li>
-          <li><a href="mission.html">Mission</a></li>
-          <li><a href="offers.html">Offers</a></li>
-          <li><a href="FAQ.html">FAQ</a></li>
-        </ul>
-      </li>
+.video-section { text-align: center; }
 
-      <!-- LATIN -->
-      <li class="has-submenu">
-        <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-latin">LATIN</button>
-        <ul id="submenu-latin" class="submenu" data-collapsed>
-          <li class="has-submenu">
-            <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-latin-fabulae">Fabulae Faciles</button>
-            <ul id="submenu-latin-fabulae" class="submenu" data-collapsed>
-              <li><a href="Perseus/001-PR.html">Perseus and Medusa</a></li>
-              <li><a href="Hercules/001-HRC.html">Hercules</a></li>
-              <li><a href="Jason/Construction.html">Golden Fleece</a></li>
-            </ul>
-          </li>
+.video-section iframe {
+  width: 100%;
+  max-width: 560px;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: none;
+}
 
-          <li class="has-submenu">
-            <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-latin-hp">Harry Potter</button>
-            <ul id="submenu-latin-hp" class="submenu" data-collapsed>
-              <li><a href="Harry-Potter-1/Construction.html">Philosophi Lapis</a></li>
-              <li><a href="Harry-Potter-2/Construction.html">Camera Secretorum</a></li>
-            </ul>
-          </li>
+.quiz-section {
+  background: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: left;
+}
 
-          <li class="has-submenu">
-            <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-latin-novels">Novels</button>
-            <ul id="submenu-latin-novels" class="submenu" data-collapsed>
-              <li><a href="Hobbit/Construction.html">Hobbitus Ille</a></li>
-              <li><a href="Winnie/Construction.html">Winnie Ille Pu</a></li>
-              <li><a href="Regulus/Construction.html">Regulus</a></li>
-            </ul>
-          </li>
-        </ul>
-      </li>
+/* Quiz structure */
+.question {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding-left: 0;
+  width: 100%;
+}
+.question p { text-align: left; margin: 0 0 10px 0; width: 100%; }
+.options { margin-left: 0; display: grid; gap: 8px; }
+.options label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  cursor: pointer;
+}
 
-      <!-- ENGLISH -->
-      <li class="has-submenu">
-        <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-english">ENGLISH</button>
-        <ul id="submenu-english" class="submenu" data-collapsed>
-          <li class="has-submenu">
-            <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-eng-grammar">Grammar</button>
-            <ul id="submenu-eng-grammar" class="submenu" data-collapsed>
-              <li><a href="Construction.html">Basic Concepts</a></li>
-              <li><a href="Construction.html">Refined Concepts</a></li>
-              <li><a href="Construction.html">Punctuation</a></li>
-            </ul>
-          </li>
+/* Prevent sideways scroll on small screens */
+html, body { overflow-x: hidden; }
 
-          <li class="has-submenu">
-            <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-eng-writing">Writing</button>
-            <ul id="submenu-eng-writing" class="submenu" data-collapsed>
-              <li><a href="Construction.html">Paragraphs</a></li>
-              <li><a href="Construction.html">Short Fiction</a></li>
-              <li><a href="Construction.html">Essays</a></li>
-            </ul>
-          </li>
+/* ===== Mobile-first navigation (hamburger + accordions) ===== */
+.navbar {
+  width: 100%;
+  background: #333;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  padding: 10px 0;
+}
 
-          <li class="has-submenu">
-            <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-eng-stories">Short Stories</button>
-            <ul id="submenu-eng-stories" class="submenu" data-collapsed>
-              <li><a href="Construction.html">Edgar Allan Poe</a></li>
-              <li><a href="Construction.html">Hemingway</a></li>
-              <li><a href="Construction.html">Chekhov</a></li>
-            </ul>
-          </li>
+.nav-toggle {
+  background: #007bff;
+  color: white;
+  border: 0;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 0 12px;
+  font: inherit;
+}
+.nav-toggle:hover { background-color: #0056b3; }
 
-          <li class="has-submenu">
-            <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-eng-poetry">Poetry</button>
-            <ul id="submenu-eng-poetry" class="submenu" data-collapsed>
-              <li><a href="Construction.html">Epic</a></li>
-              <li><a href="Construction.html">Haiku</a></li>
-              <li><a href="Construction.html">Free Verse</a></li>
-              <li><a href="Construction.html">Form Poetry</a></li>
-              <li><a href="Construction.html">Elegy</a></li>
-              <li><a href="Construction.html">Sonnets</a></li>
-            </ul>
-          </li>
-        </ul>
-      </li>
+.menu, .submenu {
+  list-style: none;
+  margin: 10px 12px;
+  padding: 0;
+}
 
-      <!-- BOOKSTORE -->
-      <li class="has-submenu">
-        <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-store">BOOKSTORE</button>
-        <ul id="submenu-store" class="submenu" data-collapsed>
-          <li class="has-submenu">
-            <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-store-latin">Latin</button>
-            <ul id="submenu-store-latin" class="submenu" data-collapsed>
-              <li><a href="https://www.amazon.com/Myth-Perseus-Latin-English-ebook/dp/B0DG62YPK1/ref=sr_1_1?crid=134OFJF0BII7S&dib=eyJ2IjoiMSJ9.OSylpwGfDK-p6bricf7Rog.9D4LdW4Zy-2elQbFTK82M_90cqzEafohE6niQtchW9A&dib_tag=se&keywords=perseus+latin+comics&qid=1756821962&s=digital-text&sprefix=perseus+latin+comic%2Cdigital-text%2C434&sr=1-1">Perseus</a></li>
-              <li><a href="Construction.html">Hercules</a></li>
-              <li><a href="Construction.html">Golden Fleece</a></li>
-            </ul>
-          </li>
+.menu > li { margin: 6px 0; }
 
-          <li class="has-submenu">
-            <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-store-english">English</button>
-            <ul id="submenu-store-english" class="submenu" data-collapsed>
-              <li><a href="https://www.amazon.com/Esthers-Descent-Sisters-Myths-Levant-ebook/dp/B078RH35GW/ref=sr_1_1?crid=1HX7G75YLZ6HI&dib=eyJ2IjoiMSJ9.F7YxHbn6QbcXg3Fth2xHSXfVG-wSpzf-yJxXZAU3VWEOFmZJGjWojCpG_PULSL5luS-JOCMuIvC5Omi8pKdcclRmj7LEP10lx_1r45hTz39cXXGwCmjidfXNw3tvn8_E4CefcgrhCRgorjv32ajANw.ABJcS5kjQNWqPDJq2efRXQj44tZi6JPkk_fLimO6pOs&dib_tag=se&keywords=Esther%27s+descent&qid=1756821862&s=digital-text&sprefix=esther%27s+descent%2Cdigital-text%2C239&sr=1-1">Esther's Descent</a></li>
-              <li><a href="https://www.amazon.com/gp/product/B0B2FPMT36/ref=x_gr_bb_kindle?caller=Goodreads&tag=x_gr_bb_kindle-20">Caravanserai of Jaffa</a></li>
-              <li><a href="https://www.amazon.com/Chosen-One-Testament-First-Office-ebook/dp/B08M66FFGR/ref=sr_1_1?crid=1ELUTOACHU1Y4&dib=eyJ2IjoiMSJ9.EaHUVex0uCm-OfThwXaDdjoMPeRU2PkQXIK3pyx-5mRa4989MV48E-C43mYjVcmMTwcaIvxZyVuwBhg6pTcDaMxZvM-NBF2rmrsI9D7kCnQmbzmPNivzsDK5X5YR70TGERIlgNV96l1nMpcIi-NK2fOo3JWULnmCqgxrtJLD6tY0bgwx2l-6bc7fSfpvMhtEYbQKjFt4Tjzuy3qU_ErqutvTNO-ounZZ0LaOLqR740c.3h9JJj-G38POcuWkdbdwZv1g3JMQshfwjIklcBm93GU&dib_tag=se&keywords=The+Chosen+One+trump&qid=1756821925&s=digital-text&sprefix=the+chosen+one+trump%2Cdigital-text%2C223&sr=1-1">The Chosen One</a></li>
-            </ul>
-          </li>
-        </ul>
-      </li>
+.menu a, .submenu-toggle {
+  display: block;
+  width: 100%;
+  text-align: left;
+  text-decoration: none;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font: inherit;
+  cursor: pointer;
+  box-sizing: border-box;
+}
 
-      <!-- CONTACTS -->
-      <li class="has-submenu">
-        <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-contacts">CONTACTS</button>
-        <ul id="submenu-contacts" class="submenu" data-collapsed>
-          <li class="has-submenu">
-            <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-support">Contact and Support</button>
-            <ul id="submenu-support" class="submenu" data-collapsed>
-              <li><a href="email.html">Email</a></li>
-              <li><a href="contact.html">Contact Form</a></li>
-              <li><a href="newsletter.html">Newsletter</a></li>
-              <li><a href="patreon.html">Patreon</a></li>
-            </ul>
-          </li>
+/* Top-level links (if any) */
+.menu a { color: white; background-color: #007bff; }
+.menu a:hover { background-color: #0056b3; }
 
-          <li class="has-submenu">
-            <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-social">Social Media</button>
-            <ul id="submenu-social" class="submenu icons" data-collapsed>
-              <li><a href="https://www.youtube.com/@Latin_Comics/playlists" aria-label="YouTube"><img src="Images/youtube.png" alt="YouTube" width="20" height="20"></a></li>
-              <li><a href="https://www.facebook.com/p/Latin-Comics-61557991202581/" aria-label="Facebook"><img src="Images/Facebook.png" alt="Facebook" width="20" height="20"></a></li>
-              <li><a href="https://www.instagram.com/paulrqps/" aria-label="Instagram"><img src="Images/instagram.png" alt="Instagram" width="20" height="20"></a></li>
-              <li><a href="https://x.com/SklDante" aria-label="Twitter"><img src="Images/twitter.png" alt="Twitter" width="20" height="20"></a></li>
-              <li><a href="https://www.tiktok.com/@latincomics" aria-label="TikTok"><img src="Images/tiktok.png" alt="TikTok" width="20" height="20"></a></li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
+/* Buttons that open submenus (mobile) */
+.submenu-toggle { color: white; background: #444; border: 0; }
+.submenu li a { background: #444; }
+.submenu li a:hover { background: #666; }
 
-  <!-- Main Content -->
-  <main>
-    <!-- Video Section -->
-    <section class="video-section">
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/eXSR8cLLRmc"
-        frameborder="0"
-        allowfullscreen
-        title="Video — The Adventures of Perseus"
-      ></iframe>
-    </section>
+/* Collapsed state (controlled by JS) */
+.menu[data-collapsed] { display: none; }
+.submenu[data-collapsed] { display: none; }
 
-    <!-- Statement of the Day -->
-    <section class="statement-section">
-      <h2>Book of the Day</h2>
-      <p>Click on the trailer video for our latest promo video - "The Adventures of Perseus in Latin and English!"</p>
-    </section>
+/* Icons row variant (Social) */
+.submenu.icons {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 4px;
+}
+.submenu.icons li a { background: transparent; padding: 6px; }
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-      <h2>Salvete! Welcome!</h2>
+/* ===== Desktop enhancement with "open" class (grace period) ===== */
+@media (min-width: 900px) {
+  .nav-toggle { display: none; }
 
-      <p><strong>Ave, sodales!</strong> We create welcoming, story-first learning for Latin and English through a <strong>comic book / graphic novel style</strong>—panels, speech bubbles, and vivid scenes that make language come alive.</p>
+  .menu {
+    display: flex !important;          /* menu visible on desktop */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px;
+  }
 
-      <p>We serve absolute beginners through advanced learners. For Latin, our videos are narrated in Latin with friendly English support; for ESL, they’re in clear English. Each lesson follows a book-like sequence and uses the <strong>natural method</strong>—learn by context, not cramming. Every video includes an <strong>interactive multiple-choice quiz</strong> so you can check understanding right away.</p>
+  .menu > li {
+    margin: 0;
+    position: relative;                /* anchor for dropdown positioning */
+  }
 
-      <p>All videos and quizzes are <strong>free</strong> for everyone. If you’d like to go further, we offer companion <strong>e-books and print editions</strong> in the same graphic-novel format on Amazon Kindle. You can also support our work on <strong>Patreon</strong>, and first-time email subscribers get alerts for <strong>monthly free Kindle e-book</strong> offers plus other updates.</p>
+  /* Top-level pills */
+  .menu > li > .submenu-toggle,
+  .menu > li > a {
+    display: inline-block;
+    width: auto;
+    background: #007bff;
+    color: #fff;
+    border: 0;
+    padding: 12px 18px;
+    border-radius: 6px;
+    white-space: nowrap;
+  }
+  .menu > li > .submenu-toggle:hover,
+  .menu > li > a:hover { background: #0056b3; }
 
-      <p><strong>We also champion new independent authors</strong> on our platform—especially original stories written in Latin and works on Mythology and the Classical world for learners. We’ll gladly consider <strong>Tolkien-style fantasy</strong>, and even <strong>romance</strong> and <strong>political satire</strong>, when they harmonize with our theme.</p>
+  /* Dropdowns: no gap; hidden until .open or focus-within */
+  .submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    background: #444;
+    border-radius: 8px;
+    box-shadow: 0 8px 18px rgba(0,0,0,.25);
+    padding: 6px 0;
+    display: none;
+    z-index: 9999;
+  }
 
-      <p>Join us—read, watch, and learn in panels and pages.</p>
-    </section>
-  </main>
+  /* Show submenu while item has .open (JS) or when keyboard focusing */
+  .menu > li.open > .submenu,
+  .menu > li:focus-within > .submenu { display: block; }
 
-  <!-- Footer -->
-  <footer>
-    <hr />
-    <div class="footer-content">
-      <p>&copy; 2025 Corax Publishing. All rights reserved.</p>
-    </div>
-  </footer>
+  /* Nested flyouts: same open/focus rules */
+  .submenu .has-submenu { position: relative; }
+  .submenu .has-submenu > .submenu {
+    top: 0;
+    left: calc(100% - 1px);
+    min-width: 220px;
+    display: none;
+  }
+  .submenu .has-submenu.open > .submenu,
+  .submenu .has-submenu:focus-within > .submenu { display: block; }
 
-  <!-- Tiny JS: mobile toggles + desktop hover grace (prevents flicker) -->
-  <script>
-    (function () {
-      const navToggle = document.querySelector('.nav-toggle');
-      const navMenu = document.getElementById('nav-menu');
+  /* Desktop submenu item sizing */
+  .submenu li a,
+  .submenu li .submenu-toggle {
+    width: 100%;
+    display: block;
+    white-space: nowrap;
+    padding: 10px 14px;
+    border-radius: 0;
+    background: #444;
+    color: #fff;
+  }
+  .submenu li a:hover,
+  .submenu li .submenu-toggle:hover { background: #666; }
+}
 
-      if (navToggle && navMenu) {
-        navToggle.addEventListener('click', () => {
-          const open = navToggle.getAttribute('aria-expanded') === 'true';
-          navToggle.setAttribute('aria-expanded', String(!open));
-          navMenu.toggleAttribute('data-collapsed');
-        });
-      }
-
-      // Submenu toggles (mobile accordion)
-      document.addEventListener('click', (e) => {
-        const btn = e.target.closest('.submenu-toggle');
-        if (!btn) return;
-        const submenuId = btn.getAttribute('aria-controls');
-        const submenu = document.getElementById(submenuId);
-        if (!submenu) return;
-
-        const open = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', String(!open));
-        submenu.toggleAttribute('data-collapsed');
-      });
-
-      // Desktop hover stability: brief delay so the cursor can cross any tiny gap
-      const mql = window.matchMedia('(min-width: 900px)');
-      const closeTimers = new WeakMap();
-
-      function bindDesktopHover() {
-        document.querySelectorAll('.menu > li.has-submenu').forEach((li) => {
-          const submenu = li.querySelector(':scope > .submenu');
-          if (!submenu) return;
-
-          li.addEventListener('mouseenter', () => {
-            clearTimeout(closeTimers.get(li));
-            li.classList.add('hover-open');
-          });
-          li.addEventListener('mouseleave', () => {
-            const t = setTimeout(() => li.classList.remove('hover-open'), 180);
-            closeTimers.set(li, t);
-          });
-
-          submenu.addEventListener('mouseenter', () => {
-            clearTimeout(closeTimers.get(li));
-            li.classList.add('hover-open');
-          });
-          submenu.addEventListener('mouseleave', () => {
-            const t = setTimeout(() => li.classList.remove('hover-open'), 180);
-            closeTimers.set(li, t);
-          });
-        });
-      }
-
-      if (mql.matches) bindDesktopHover();
-      mql.addEventListener('change', (e) => {
-        // clear classes when switching modes
-        document.querySelectorAll('.menu > li.hover-open').forEach(li => li.classList.remove('hover-open'));
-        if (e.matches) bindDesktopHover();
-      });
-    })();
-  </script>
-</body>
-</html>
-
-
-
-
-
+/* Tiny devices tweaks */
+@media (max-width: 420px) {
+  .menu a, .submenu-toggle { padding: 10px 12px; }
+}
 
 
 
