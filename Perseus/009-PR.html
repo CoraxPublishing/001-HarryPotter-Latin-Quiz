@@ -1,179 +1,405 @@
- <section class="quiz-section">
-  <h1>Perseus and Medusa Quiz - Chapter Nine</h1>
-      <h4>(Choose the literal meaning and grammatical detail: <br>
-    case if a noun/adjective, tense/aspect if a verb)</h4>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Perseus — Chapter 9 Quiz</title>
+  <!-- Shared root stylesheet -->
+  <link rel="stylesheet" href="../style.css" />
+</head>
 
-<div style="text-align: left;">
-<br><br>
- <!--This is where the dialogue goes-->
-1.	Perseus postquam ad litus descendit, primum talaria exuit; tum ad rupem venit ubi Andromeda <i><b>vincta erat</b></i>.<br><br>
-2.	Ea autem omnem spem salutis <i><b>deposuerat</b></i>, et ubi Perseus adiit, terrore paene <i><b>exanimata erat</b></i>.<br><br>
-3.	Ille vincula <i><b>statim</b></i> solvit, et puellam patri reddidit. Cepheus ob hanc rem maximo gaudio affectus est. <br><br>
-4.	Meritam gratiam <i><b>pro tanto beneficio</b></i> Perseo rettulit; <i><b>praeterea</b></i> Andromedam ipsam ei in matrimonium dedit. Ille libenter hoc donum accepit et puellam duxit. <br><br>
-5.	<i><b>Paucos annos</b></i> cum uxore sua in ea regione habitabat, et in magno honore erat <i><b>apud</b></i> omnis Aethiopes. <br><br>
-6.	Magnopere tamen matrem suam <i><b>rursus</b></i> videre <i><b>cupiebat</b></i>. Tandem igitur cum uxore sua e regno Cephei discessit. <br><br>
-
-
-<!--This is where the dialogue ends-->
-<br><br>
-</div>
-
-
-
-
-  <form id="quizForm">
-    <!-- 10 Placeholder Questions -->
-    <!-- Copy & paste this question block 10 times, updating IDs and values -->
-    <!-- Start of Question Blocks -->
- <div class="question">
-  <p>1. Vincta erat</p>
-  <div class="options">
-    <label><input type="radio" name="q1" value="a"> A) She was binding (verb phrase, imperfect, indicative, active)</label>
-    <label><input type="radio" name="q1" value="b"> B) She had been bound (verb phrase, pluperfect, indicative, passive)</label> <!-- correct -->
-    <label><input type="radio" name="q1" value="c"> C) She had bound (verb phrase, pluperfect, indicative, active)</label>
-    <label><input type="radio" name="q1" value="d"> D) She was about to be bound (verb phrase, future, indicative, passive)</label>
+<body>
+  <!-- Optional site title -->
+  <div class="site-title">
+    <h1>Corax Publishing</h1>
   </div>
-</div>
 
-<div class="question">
-  <p>2. Deposuerat</p>
-  <div class="options">
-    <label><input type="radio" name="q2" value="a"> A) He has been put down (verb, perfect, indicative, passive)</label>
-    <label><input type="radio" name="q2" value="b"> B) He was putting down (verb, imperfect, indicative, active)</label>
-    <label><input type="radio" name="q2" value="c"> C) He had put down (verb, pluperfect, indicative, active)</label> <!-- correct -->
-    <label><input type="radio" name="q2" value="d"> D) He put down (verb, perfect, indicative, active)</label>
-  </div>
-</div>
+  <!-- Series mast image -->
+  <header>
+    <img src="Images/Perseus-Logo.jpg" alt="Perseus Series Logo" />
+  </header>
 
-<div class="question">
-  <p>3. Exanimata erat</p>
-  <div class="options">
-    <label><input type="radio" name="q3" value="a"> A) She was exhausting (verb phrase, imperfect, indicative, active)</label>
-    <label><input type="radio" name="q3" value="b"> B) She had frightened (verb phrase, pluperfect, indicative, active)</label>
-    <label><input type="radio" name="q3" value="c"> C) She had been rendered unconscious (verb phrase, pluperfect passive)</label> <!-- correct -->
-    <label><input type="radio" name="q3" value="d"> D) She is lifeless (adjective phrase)</label>
-  </div>
-</div>
+  <!-- PRIMARY SITE NAV (same as homepage) -->
+  <nav class="navbar" aria-label="Primary">
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">☰ Menu</button>
 
-<div class="question">
-  <p>4. Statim</p>
-  <div class="options">
-    <label><input type="radio" name="q4" value="a"> A) Rarely (adverb)</label>
-    <label><input type="radio" name="q4" value="b"> B) At once upon command (adverbial phrase)</label>
-    <label><input type="radio" name="q4" value="c"> C) Immediately (adverb)</label> <!-- correct -->
-    <label><input type="radio" name="q4" value="d"> D) Slowly (adverb)</label>
-  </div>
-</div>
+    <ul id="nav-menu" class="menu" data-collapsed>
+      <!-- ABOUT -->
+      <li class="has-submenu">
+        <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-about">ABOUT</button>
+        <ul id="submenu-about" class="submenu" data-collapsed>
+          <li><a href="../index.html#about">Overview</a></li>
+          <li><a href="../mission.html">Mission</a></li>
+          <li><a href="../offers.html">Offers</a></li>
+          <li><a href="../FAQ.html">FAQ</a></li>
+        </ul>
+      </li>
 
-<div class="question">
-  <p>5. Pro tanto beneficio</p>
-  <div class="options">
-    <label><input type="radio" name="q5" value="a"> A) Because of great difficulty (prepositional phrase)</label>
-    <label><input type="radio" name="q5" value="b"> B) In exchange for little benefit (prepositional phrase)</label>
-    <label><input type="radio" name="q5" value="c"> C) In return for such a great kindness (prepositional phrase)</label> <!-- correct -->
-    <label><input type="radio" name="q5" value="d"> D) By great kindness (ablative phrase)</label>
-  </div>
-</div>
+      <!-- LATIN -->
+      <li class="has-submenu">
+        <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-latin">LATIN</button>
+        <ul id="submenu-latin" class="submenu" data-collapsed>
+          <li class="has-submenu">
+            <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-latin-fabulae">Fabulae Faciles</button>
+            <ul id="submenu-latin-fabulae" class="submenu" data-collapsed>
+              <li><a href="../Perseus/001-PR.html">Perseus and Medusa</a></li>
+              <li><a href="../Hercules/001-HRC.html">Hercules</a></li>
+              <li><a href="../Jason/Construction.html">Golden Fleece</a></li>
+            </ul>
+          </li>
 
-<div class="question">
-  <p>6. Praeterea</p>
-  <div class="options">
-    <label><input type="radio" name="q6" value="a"> A) Therefore (adverb)</label>
-    <label><input type="radio" name="q6" value="b"> B) Besides / furthermore (adverb)</label> <!-- correct -->
-    <label><input type="radio" name="q6" value="c"> C) However (adverb)</label>
-    <label><input type="radio" name="q6" value="d"> D) In front of (preposition)</label>
-  </div>
-</div>
+          <li class="has-submenu">
+            <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-latin-hp">Harry Potter</button>
+            <ul id="submenu-latin-hp" class="submenu" data-collapsed>
+              <li><a href="../Harry-Potter-1/Construction.html">Philosophi Lapis</a></li>
+              <li><a href="../Harry-Potter-2/Construction.html">Camera Secretorum</a></li>
+            </ul>
+          </li>
 
-<div class="question">
-  <p>7. Paucos annos</p>
-  <div class="options">
-    <label><input type="radio" name="q7" value="a"> A) In a few years (ablative time when)</label>
-    <label><input type="radio" name="q7" value="b"> B) With little age (ablative phrase)</label>
-    <label><input type="radio" name="q7" value="c"> C) For a few years (accusative duration of time)</label> <!-- correct -->
-    <label><input type="radio" name="q7" value="d"> D) During the year (accusative singular)</label>
-  </div>
-</div>
+          <li class="has-submenu">
+            <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-latin-novels">Novels</button>
+            <ul id="submenu-latin-novels" class="submenu" data-collapsed>
+              <li><a href="../Hobbit/Construction.html">Hobbitus Ille</a></li>
+              <li><a href="../Winnie/Construction.html">Winnie Ille Pu</a></li>
+              <li><a href="../Regulus/Construction.html">Regulus</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
 
-<div class="question">
-  <p>8. Apud</p>
-  <div class="options">
-    <label><input type="radio" name="q8" value="a"> A) From (preposition + ablative)</label>
-    <label><input type="radio" name="q8" value="b"> B) Through (preposition + accusative)</label>
-    <label><input type="radio" name="q8" value="c"> C) Among / in the presence of (preposition + accusative)</label> <!-- correct -->
-    <label><input type="radio" name="q8" value="d"> D) Around (preposition + accusative)</label>
-  </div>
-</div>
+      <!-- ENGLISH -->
+      <li class="has-submenu">
+        <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-english">ENGLISH</button>
+        <ul id="submenu-english" class="submenu" data-collapsed>
+          <li class="has-submenu">
+            <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-eng-grammar">Grammar</button>
+            <ul id="submenu-eng-grammar" class="submenu" data-collapsed>
+              <li><a href="../Construction.html">Basic Concepts</a></li>
+              <li><a href="../Construction.html">Refined Concepts</a></li>
+              <li><a href="../Construction.html">Punctuation</a></li>
+            </ul>
+          </li>
 
-<div class="question">
-  <p>9. Rursus</p>
-  <div class="options">
-    <label><input type="radio" name="q9" value="a"> A) At first (adverb)</label>
-    <label><input type="radio" name="q9" value="b"> B) Next (adverb)</label>
-    <label><input type="radio" name="q9" value="c"> C) Again / back (adverb)</label> <!-- correct -->
-    <label><input type="radio" name="q9" value="d"> D) Suddenly (adverb)</label>
-  </div>
-</div>
+          <li class="has-submenu">
+            <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-eng-writing">Writing</button>
+            <ul id="submenu-eng-writing" class="submenu" data-collapsed>
+              <li><a href="../Construction.html">Paragraphs</a></li>
+              <li><a href="../Construction.html">Short Fiction</a></li>
+              <li><a href="../Construction.html">Essays</a></li>
+            </ul>
+          </li>
 
-<div class="question">
-  <p>10. Cupiebat</p>
-  <div class="options">
-    <label><input type="radio" name="q10" value="a"> A) He will desire (verb, future, indicative, active)</label>
-    <label><input type="radio" name="q10" value="b"> B) He is desired (verb, present, indicative, passive)</label>
-    <label><input type="radio" name="q10" value="c"> C) He was desiring (verb, imperfect, indicative, active)</label> <!-- correct -->
-    <label><input type="radio" name="q10" value="d"> D) He desired (verb, perfect, indicative, active)</label>
-  </div>
-</div>
+          <li class="has-submenu">
+            <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-eng-stories">Short Stories</button>
+            <ul id="submenu-eng-stories" class="submenu" data-collapsed>
+              <li><a href="../Construction.html">Edgar Allan Poe</a></li>
+              <li><a href="../Construction.html">Hemingway</a></li>
+              <li><a href="../Construction.html">Chekhov</a></li>
+            </ul>
+          </li>
 
-    <!-- End of Question Blocks -->
+          <li class="has-submenu">
+            <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-eng-poetry">Poetry</button>
+            <ul id="submenu-eng-poetry" class="submenu" data-collapsed>
+              <li><a href="../Construction.html">Epic</a></li>
+              <li><a href="../Construction.html">Haiku</a></li>
+              <li><a href="../Construction.html">Free Verse</a></li>
+              <li><a href="../Construction.html">Form Poetry</a></li>
+              <li><a href="../Construction.html">Elegy</a></li>
+              <li><a href="../Construction.html">Sonnets</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
 
-    <br>
-    <button type="button" onclick="checkAnswers()">Submit</button>
-    <div id="result"></div>
-  </form>
+      <!-- BOOKSTORE -->
+      <li class="has-submenu">
+        <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-store">BOOKSTORE</button>
+        <ul id="submenu-store" class="submenu" data-collapsed>
+          <li class="has-submenu">
+            <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-store-latin">Latin</button>
+            <ul id="submenu-store-latin" class="submenu" data-collapsed>
+              <li><a href="https://www.amazon.com/Myth-Perseus-Latin-English-ebook/dp/B0DG62YPK1/">Perseus</a></li>
+              <li><a href="../Construction.html">Hercules</a></li>
+              <li><a href="../Construction.html">Golden Fleece</a></li>
+            </ul>
+          </li>
+          <li class="has-submenu">
+            <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-store-english">English</button>
+            <ul id="submenu-store-english" class="submenu" data-collapsed>
+              <li><a href="https://www.amazon.com/Esthers-Descent-Sisters-Myths-Levant-ebook/dp/B078RH35GW/">Esther's Descent</a></li>
+              <li><a href="https://www.amazon.com/gp/product/B0B2FPMT36/">Caravanserai of Jaffa</a></li>
+              <li><a href="https://www.amazon.com/Chosen-One-Testament-First-Office-ebook/dp/B08M66FFGR/">The Chosen One</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
 
-  <!-- JavaScript to check answers and highlight correct ones -->
-  <script>
-    function checkAnswers() {
-      const answers = {
-        q1: 'b', q2: 'c', q3: 'c', q4: 'c', q5: 'c',
-        q6: 'b', q7: 'c', q8: 'c', q9: 'c', q10: 'c'
-      };
+      <!-- CONTACTS -->
+      <li class="has-submenu">
+        <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-contacts">CONTACTS</button>
+        <ul id="submenu-contacts" class="submenu" data-collapsed>
+          <li class="has-submenu">
+            <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-support">Contact and Support</button>
+            <ul id="submenu-support" class="submenu" data-collapsed>
+              <li><a href="../email.html">Email</a></li>
+              <li><a href="../contact.html">Contact Form</a></li>
+              <li><a href="../newsletter.html">Newsletter</a></li>
+              <li><a href="../patreon.html">Patreon</a></li>
+            </ul>
+          </li>
+          <li class="has-submenu">
+            <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-social">Social Media</button>
+            <ul id="submenu-social" class="submenu icons" data-collapsed>
+              <li><a href="https://www.youtube.com/@Latin_Comics/playlists" aria-label="YouTube"><img src="../Images/youtube.png" alt="YouTube" width="20" height="20"></a></li>
+              <li><a href="https://www.facebook.com/p/Latin-Comics-61557991202581/" aria-label="Facebook"><img src="../Images/Facebook.png" alt="Facebook" width="20" height="20"></a></li>
+              <li><a href="https://www.instagram.com/paulrqps/" aria-label="Instagram"><img src="../Images/instagram.png" alt="Instagram" width="20" height="20"></a></li>
+              <li><a href="https://x.com/SklDante" aria-label="Twitter"><img src="../Images/twitter.png" alt="Twitter" width="20" height="20"></a></li>
+              <li><a href="https://www.tiktok.com/@latincomics" aria-label="TikTok"><img src="../Images/tiktok.png" alt="TikTok" width="20" height="20"></a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
 
-      let score = 0;
+  <!-- CHAPTER NAV (hamburger on mobile, inline on desktop) -->
+  <nav class="navbar" aria-label="Perseus Chapters">
+    <button class="nav-toggle" aria-expanded="false" aria-controls="chapters-menu" aria-label="Open chapters">☰ Chapters</button>
 
-      for (let i = 1; i <= 10; i++) {
-        const qName = `q${i}`;
-        const selected = document.querySelector(`input[name="${qName}"]:checked`);
-        const correctValue = answers[qName];
+    <ul id="chapters-menu" class="menu" data-collapsed>
+      <li><a href="001-PR.html">Chapter 1</a></li>
+      <li><a href="002-PR.html">Chapter 2</a></li>
+      <li><a href="003-PR.html">Chapter 3</a></li>
+      <li><a href="004-PR.html">Chapter 4</a></li>
+      <li><a href="005-PR.html">Chapter 5</a></li>
+      <li><a href="006-PR.html">Chapter 6</a></li>
+      <li><a href="007-PR.html">Chapter 7</a></li>
+      <li><a href="008-PR.html">Chapter 8</a></li>
+      <li><a href="009-PR.html" aria-current="page">Chapter 9</a></li>
+      <li><a href="010-PR.html">Chapter 10</a></li>
+      <li><a href="011-PR.html">Chapter 11</a></li>
+    </ul>
 
-        const labels = document.querySelectorAll(`input[name="${qName}"]`);
+    <!-- Prev / Home / Next -->
+    <ul class="menu">
+      <li><a href="008-PR.html">⟵ Previous</a></li>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="010-PR.html">Next ⟶</a></li>
+    </ul>
+  </nav>
 
-        labels.forEach(input => {
-          const parentLabel = input.parentElement;
-          parentLabel.style.backgroundColor = '';
-        });
+  <main>
+    <!-- Video -->
+    <section class="video-section">
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/klnrHjlz964"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        title="Perseus Chapter 9 Video"></iframe>
+    </section>
 
-        if (selected) {
-          if (selected.value === correctValue) {
-            score++;
-          } else {
-            // highlight correct answer
+    <!-- QUIZ -->
+    <section class="quiz-section">
+      <h1>Perseus and Medusa Quiz — Chapter Nine</h1>
+      <h4>(Choose the literal meaning and grammatical detail: case if a noun/adjective, tense/aspect if a verb)</h4>
+
+      <div style="text-align:left">
+        <br><br>
+        <!-- Passage -->
+        1. Perseus postquam ad litus descendit, primum talaria exuit; tum ad rupem venit ubi Andromeda <i><b>vincta erat</b></i>.<br><br>
+        2. Ea autem omnem spem salutis <i><b>deposuerat</b></i>, et ubi Perseus adiit, terrore paene <i><b>exanimata erat</b></i>.<br><br>
+        3. Ille vincula <i><b>statim</b></i> solvit, et puellam patri reddidit. Cepheus ob hanc rem maximo gaudio affectus est. <br><br>
+        4. Meritam gratiam <i><b>pro tanto beneficio</b></i> Perseo rettulit; <i><b>praeterea</b></i> Andromedam ipsam ei in matrimonium dedit. Ille libenter hoc donum accepit et puellam duxit. <br><br>
+        5. <i><b>Paucos annos</b></i> cum uxore sua in ea regione habitabat, et in magno honore erat <i><b>apud</b></i> omnis Aethiopes. <br><br>
+        6. Magnopere tamen matrem suam <i><b>rursus</b></i> videre <i><b>cupiebat</b></i>. Tandem igitur cum uxore sua e regno Cephei discessit. <br><br>
+        <br><br>
+      </div>
+
+      <form id="quizForm">
+        <!-- Questions -->
+        <div class="question">
+          <p>1. Vincta erat</p>
+          <div class="options">
+            <label><input type="radio" name="q1" value="a"> A) She was binding (verb phrase, imperfect, indicative, active)</label>
+            <label><input type="radio" name="q1" value="b"> B) She had been bound (verb phrase, pluperfect, indicative, passive)</label>
+            <label><input type="radio" name="q1" value="c"> C) She had bound (verb phrase, pluperfect, indicative, active)</label>
+            <label><input type="radio" name="q1" value="d"> D) She was about to be bound (verb phrase, future, indicative, passive)</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>2. Deposuerat</p>
+          <div class="options">
+            <label><input type="radio" name="q2" value="a"> A) He has been put down (verb, perfect, indicative, passive)</label>
+            <label><input type="radio" name="q2" value="b"> B) He was putting down (verb, imperfect, indicative, active)</label>
+            <label><input type="radio" name="q2" value="c"> C) He had put down (verb, pluperfect, indicative, active)</label>
+            <label><input type="radio" name="q2" value="d"> D) He put down (verb, perfect, indicative, active)</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>3. Exanimata erat</p>
+          <div class="options">
+            <label><input type="radio" name="q3" value="a"> A) She was exhausting (verb phrase, imperfect, indicative, active)</label>
+            <label><input type="radio" name="q3" value="b"> B) She had frightened (verb phrase, pluperfect, indicative, active)</label>
+            <label><input type="radio" name="q3" value="c"> C) She had been rendered unconscious (verb phrase, pluperfect passive)</label>
+            <label><input type="radio" name="q3" value="d"> D) She is lifeless (adjective phrase)</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>4. Statim</p>
+          <div class="options">
+            <label><input type="radio" name="q4" value="a"> A) Rarely (adverb)</label>
+            <label><input type="radio" name="q4" value="b"> B) At once upon command (adverbial phrase)</label>
+            <label><input type="radio" name="q4" value="c"> C) Immediately (adverb)</label>
+            <label><input type="radio" name="q4" value="d"> D) Slowly (adverb)</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>5. Pro tanto beneficio</p>
+          <div class="options">
+            <label><input type="radio" name="q5" value="a"> A) Because of great difficulty (prepositional phrase)</label>
+            <label><input type="radio" name="q5" value="b"> B) In exchange for little benefit (prepositional phrase)</label>
+            <label><input type="radio" name="q5" value="c"> C) In return for such a great kindness (prepositional phrase)</label>
+            <label><input type="radio" name="q5" value="d"> D) By great kindness (ablative phrase)</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>6. Praeterea</p>
+          <div class="options">
+            <label><input type="radio" name="q6" value="a"> A) Therefore (adverb)</label>
+            <label><input type="radio" name="q6" value="b"> B) Besides / furthermore (adverb)</label>
+            <label><input type="radio" name="q6" value="c"> C) However (adverb)</label>
+            <label><input type="radio" name="q6" value="d"> D) In front of (preposition)</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>7. Paucos annos</p>
+          <div class="options">
+            <label><input type="radio" name="q7" value="a"> A) In a few years (ablative time when)</label>
+            <label><input type="radio" name="q7" value="b"> B) With little age (ablative phrase)</label>
+            <label><input type="radio" name="q7" value="c"> C) For a few years (accusative duration of time)</label>
+            <label><input type="radio" name="q7" value="d"> D) During the year (accusative singular)</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>8. Apud</p>
+          <div class="options">
+            <label><input type="radio" name="q8" value="a"> A) From (preposition + ablative)</label>
+            <label><input type="radio" name="q8" value="b"> B) Through (preposition + accusative)</label>
+            <label><input type="radio" name="q8" value="c"> C) Among / in the presence of (preposition + accusative)</label>
+            <label><input type="radio" name="q8" value="d"> D) Around (preposition + accusative)</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>9. Rursus</p>
+          <div class="options">
+            <label><input type="radio" name="q9" value="a"> A) At first (adverb)</label>
+            <label><input type="radio" name="q9" value="b"> B) Next (adverb)</label>
+            <label><input type="radio" name="q9" value="c"> C) Again / back (adverb)</label>
+            <label><input type="radio" name="q9" value="d"> D) Suddenly (adverb)</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>10. Cupiebat</p>
+          <div class="options">
+            <label><input type="radio" name="q10" value="a"> A) He will desire (verb, future, indicative, active)</label>
+            <label><input type="radio" name="q10" value="b"> B) He is desired (verb, present, indicative, passive)</label>
+            <label><input type="radio" name="q10" value="c"> C) He was desiring (verb, imperfect, indicative, active)</label>
+            <label><input type="radio" name="q10" value="d"> D) He desired (verb, perfect, indicative, active)</label>
+          </div>
+        </div>
+
+        <br>
+        <button type="button" onclick="checkAnswers()">Submit</button>
+        <div id="result"></div>
+      </form>
+
+      <script>
+        function checkAnswers() {
+          const answers = {
+            q1: 'b', q2: 'c', q3: 'c', q4: 'c', q5: 'c',
+            q6: 'b', q7: 'c', q8: 'c', q9: 'c', q10: 'c'
+          };
+
+          let score = 0;
+
+          for (let i = 1; i <= 10; i++) {
+            const qName = `q${i}`;
+            const selected = document.querySelector(`input[name="${qName}"]:checked`);
+            const correctValue = answers[qName];
+
+            // clear previous highlights
+            document.querySelectorAll(`input[name="${qName}"]`).forEach(input => {
+              input.parentElement.style.backgroundColor = '';
+            });
+
+            if (selected && selected.value === correctValue) {
+              score++;
+            }
+
+            // always show the correct answer
             const correctInput = document.querySelector(`input[name="${qName}"][value="${correctValue}"]`);
             if (correctInput) {
               correctInput.parentElement.style.backgroundColor = '#d4edda'; // light green
             }
           }
-        } else {
-          // still highlight correct even if unanswered
-          const correctInput = document.querySelector(`input[name="${qName}"][value="${correctValue}"]`);
-          if (correctInput) {
-            correctInput.parentElement.style.backgroundColor = '#d4edda';
-          }
+
+          document.getElementById('result').innerHTML = `<br><br>You got ${score} out of 10 correct.`;
         }
+      </script>
+    </section>
+  </main>
+
+  <footer>
+    <hr />
+    <div class="footer-content">
+      <p>&copy; 2025 Corax Publishing. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Minimal JS to power both hamburger menus + mobile submenus -->
+  <script>
+    (function () {
+      function wireToggle(btnSelector, menuId) {
+        const btn = document.querySelector(btnSelector);
+        const menu = document.getElementById(menuId);
+        if (!btn || !menu) return;
+        btn.addEventListener('click', () => {
+          const open = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', String(!open));
+          menu.toggleAttribute('data-collapsed');
+        });
       }
 
-      document.getElementById('result').innerHTML = `<br><br>You got ${score} out of 10 correct.`;
-    }
+      // Primary site nav
+      wireToggle('.navbar[aria-label="Primary"] .nav-toggle', 'nav-menu');
+
+      // Chapters nav
+      wireToggle('.navbar[aria-label="Perseus Chapters"] .nav-toggle', 'chapters-menu');
+
+      // Mobile accordion toggles (for all submenus)
+      document.addEventListener('click', (e) => {
+        const btn = e.target.closest('.submenu-toggle');
+        if (!btn) return;
+        const submenu = document.getElementById(btn.getAttribute('aria-controls'));
+        if (!submenu) return;
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        submenu.toggleAttribute('data-collapsed');
+      });
+    })();
   </script>
-</section>
+</body>
+</html>
