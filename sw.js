@@ -1,5 +1,6 @@
 // Minimal service worker: offline basics + installability
-const CACHE = "corax-v2";
+const CACHE = "corax-v10";
+
 const ASSETS = [
   "./",
   "./index.html",
@@ -41,4 +42,5 @@ self.addEventListener("fetch", (e) => {
     )
   );
 });
+
 
