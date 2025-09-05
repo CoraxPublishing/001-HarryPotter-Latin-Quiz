@@ -1,6 +1,6 @@
 {
   "name": "Corax Publishing",
-  "short_name": "Corax",
+  "short_name": "Corax Publishing",
   "start_url": ".",
   "scope": ".",
   "display": "standalone",
@@ -11,3 +11,4 @@
     { "src": "Images/icon-512.png",  "sizes": "512x512",  "type": "image/png" }
   ]
 }
+
