@@ -194,6 +194,25 @@ nav ul.menu li ul.dropdown li:hover > ul.dropdown {
   cursor: pointer;
 }
 
+/* --- Hercules chapters: wrap nicely on desktop --- */
+@media (min-width: 900px) {
+  nav[aria-label="Hercules Chapters"] .menu {
+    /* your .menu is flex already; just allow wrapping */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    white-space: normal;
+    overflow: visible;
+    max-width: 1100px;       /* keeps lines readable */
+    margin-inline: auto;     /* centers the block */
+  }
+
+  /* Slightly tighter buttons so more fit per row */
+  nav[aria-label="Hercules Chapters"] .menu li a {
+    padding: 8px 10px;
+  }
+}
+
 
 
 
