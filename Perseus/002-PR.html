@@ -19,7 +19,7 @@
     <img src="Images/Perseus-Logo.jpg" alt="Perseus Series Logo" />
   </header>
 
-  <!-- PRIMARY SITE NAV (copy of 001) -->
+  <!-- PRIMARY SITE NAV (identical to 001) -->
   <nav class="navbar" aria-label="Primary">
     <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">☰ Menu</button>
 
@@ -163,7 +163,7 @@
     </ul>
   </nav>
 
-  <!-- CHAPTER NAV (copy of 001, with Chapter 2 marked current) -->
+  <!-- CHAPTER NAV (same pattern as 001; Chapter 2 current) -->
   <nav class="navbar" aria-label="Perseus Chapters">
     <button class="nav-toggle" aria-expanded="false" aria-controls="chapters-menu" aria-label="Open chapters">☰ Chapters</button>
 
@@ -189,22 +189,185 @@
   </nav>
 
   <main>
-    <!-- ================== KEEP YOUR EXISTING CHAPTER 2 CONTENT ================== -->
-    <!-- Paste your current Chapter 2 video + passage + <form id="quizForm"> block
-         here exactly as they are now in your working 002 file. Do NOT change the text.
-         Only ensure the outer wrappers use the same classes as 001: -->
-
-    <!-- Video -->
+    <!-- YOUR EXACT VIDEO SECTION -->
     <section class="video-section">
-      <!-- (keep your original Chapter 2 iframe src here) -->
-      <!-- Example shape: <iframe width="560" height="315" src="YOUR-CH2-URL" ...></iframe> -->
+      <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/9pOO4AmqXOs" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
     </section>
 
-    <!-- Quiz -->
+    <!-- YOUR EXACT QUIZ SECTION -->
     <section class="quiz-section">
-      <!-- PASTE your Chapter 2 passage, the 10 questions, and the checkAnswers() script here, unchanged -->
+      <h1>Perseus and Medusa Quiz - Chapter Two</h1>
+      <h4>(Choose the literal meaning and grammatical detail: <br>
+        case if a noun/adjective, tense/aspect if a verb)</h4>
+
+      <div style="text-align: left;">
+        <br><br>
+        <!--This is where the dialogue goes-->
+        1. Iuppiter <i><b>tamen</b></i> haec omnia vidit, et filium suum servare <i><b>constituit</b></i>.<br><br> 
+        2. Tranquillum igitur fecit mare, et arcam ad insulam Seriphum <i><b>perduxit</b></i>.<br><br>
+        3. Huius insulae Polydectes <i><b>tum</b></i> rex erat. <br><br> 
+        4. Postquam arca ad litus <i><b>appulsa est</b></i>, Danae in harena quietem <i><b>capiebat</b></i>. <br><br>
+        5. Post breve tempus a piscatore <i><b>quodam</b></i> reperta est, <br><br>
+        6. et ad domum regis Polydectis <i><b>adducta est</i></b>.<br><br>
+        7. Ille matrem et puerum benigne <i><b>excepit</b></i>, et iis sedem tutam in finibus suis dedit. <br><br>
+        8. Danae hoc donum <i><b>libenter</b></i> accepit, et pro tanto beneficio regi gratias egit. <br><br>
+        <!--This is where the dialogue ends-->
+        <br><br>
+      </div>
+
+      <form id="quizForm">
+        <!-- Start of Question Blocks -->
+        <div class="question">
+          <p>1. Tamen</p>
+          <div class="options">
+            <label><input type="radio" name="q1" value="a"> A) However much (conjunction)</label>
+            <label><input type="radio" name="q1" value="b"> B) So that (conjunction)</label>
+            <label><input type="radio" name="q1" value="c"> C) Nevertheless (adverb)</label>
+            <label><input type="radio" name="q1" value="d"> D) Soon (adverb)</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>2. Constituit</p>
+          <div class="options">
+            <label><input type="radio" name="q2" value="a"> A) He decided (verb, perfect, indicative, active)</label>
+            <label><input type="radio" name="q2" value="b"> B) He was deciding (verb, imperfect, indicative, active)</label>
+            <label><input type="radio" name="q2" value="c"> C) He decides (verb, present, indicative, active)</label>
+            <label><input type="radio" name="q2" value="d"> D) He had been decided (verb, pluperfect, indicative, passive)</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>3. Perduxit</p>
+          <div class="options">
+            <label><input type="radio" name="q3" value="a"> A) He led through (verb, perfect, indicative, active)</label>
+            <label><input type="radio" name="q3" value="b"> B) He was leading (verb, imperfect, indicative, active)</label>
+            <label><input type="radio" name="q3" value="c"> C) He has been led (verb, perfect, indicative, passive)</label>
+            <label><input type="radio" name="q3" value="d"> D) He had led across (verb, pluperfect, indicative, active)</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>4. Tum</p>
+          <div class="options">
+            <label><input type="radio" name="q4" value="a"> A) While (conjunction)</label>
+            <label><input type="radio" name="q4" value="b"> B) There (adverb)</label>
+            <label><input type="radio" name="q4" value="c"> C) Then (adverb)</label>
+            <label><input type="radio" name="q4" value="d"> D) Again (adverb)</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>5. Appulsa est</p>
+          <div class="options">
+            <label><input type="radio" name="q5" value="a"> A) Was brought (verb, perfect, indicative, passive)</label>
+            <label><input type="radio" name="q5" value="b"> B) Has pushed (verb, perfect, indicative, active)</label>
+            <label><input type="radio" name="q5" value="c"> C) Is striking (verb, present, indicative, active)</label>
+            <label><input type="radio" name="q5" value="d"> D) Was calling (verb, imperfect, indicative, active)</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>6. Capiebat</p>
+          <div class="options">
+            <label><input type="radio" name="q6" value="a"> A) Took (verb, perfect, indicative, active)</label>
+            <label><input type="radio" name="q6" value="b"> B) Is taken (verb, present, indicative, passive)</label>
+            <label><input type="radio" name="q6" value="c"> C) Will take (verb, future, indicative, active)</label>
+            <label><input type="radio" name="q6" value="d"> D) Was taking (verb, imperfect, indicative, active)</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>7. Quodam</p>
+          <div class="options">
+            <label><input type="radio" name="q7" value="a"> A) Who (relative pronoun, nominative, singular)</label>
+            <label><input type="radio" name="q7" value="b"> B) A certain (adjective, ablative, singular)</label>
+            <label><input type="radio" name="q7" value="c"> C) Someone (pronoun, nominative, singular)</label>
+            <label><input type="radio" name="q7" value="d"> D) When (conjunction)</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>8. Adducta est</p>
+          <div class="options">
+            <label><input type="radio" name="q8" value="a"> A) Has led (verb, perfect, indicative, active)</label>
+            <label><input type="radio" name="q8" value="b"> B) Was led (verb, perfect, indicative, passive)</label>
+            <label><input type="radio" name="q8" value="c"> C) Is leading (verb, present, indicative, active)</label>
+            <label><input type="radio" name="q8" value="d"> D) Had been drawn (verb, pluperfect, indicative, passive)</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>9. Excepit</p>
+          <div class="options">
+            <label><input type="radio" name="q9" value="a"> A) He was taking (verb, imperfect, indicative, active)</label>
+            <label><input type="radio" name="q9" value="b"> B) He had received (verb, pluperfect, indicative, active)</label>
+            <label><input type="radio" name="q9" value="c"> C) He is caught (verb, present, indicative, passive)</label>
+            <label><input type="radio" name="q9" value="d"> D) He received (verb, perfect, indicative, active)</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>10. Libenter</p>
+          <div class="options">
+            <label><input type="radio" name="q10" value="a"> A) Freely (adverb)</label>
+            <label><input type="radio" name="q10" value="b"> B) Readily (adverb)</label>
+            <label><input type="radio" name="q10" value="c"> C) With freedom (phrase, ablative of means)</label>
+            <label><input type="radio" name="q10" value="d"> D) Willingly (adverb)</label>
+          </div>
+        </div>
+        <!-- End of Question Blocks -->
+
+        <br>
+        <button type="button" onclick="checkAnswers()">Submit</button>
+        <div id="result"></div>
+      </form>
+
+      <!-- JavaScript to check answers and highlight correct ones -->
+      <script>
+        function checkAnswers() {
+          const answers = {
+            q1: 'c', q2: 'a', q3: 'a', q4: 'c', q5: 'a',
+            q6: 'd', q7: 'b', q8: 'b', q9: 'd', q10: 'd'
+          };
+
+          let score = 0;
+
+          for (let i = 1; i <= 10; i++) {
+            const qName = `q${i}`;
+            const selected = document.querySelector(`input[name="${qName}"]:checked`);
+            const correctValue = answers[qName];
+
+            const labels = document.querySelectorAll(`input[name="${qName}"]`);
+            labels.forEach(input => {
+              const parentLabel = input.parentElement;
+              parentLabel.style.backgroundColor = '';
+            });
+
+            if (selected) {
+              if (selected.value === correctValue) {
+                score++;
+              } else {
+                const correctInput = document.querySelector(`input[name="${qName}"][value="${correctValue}"]`);
+                if (correctInput) correctInput.parentElement.style.backgroundColor = '#d4edda';
+              }
+            } else {
+              const correctInput = document.querySelector(`input[name="${qName}"][value="${correctValue}"]`);
+              if (correctInput) correctInput.parentElement.style.backgroundColor = '#d4edda';
+            }
+          }
+
+          document.getElementById('result').innerHTML = `<br><br>You got ${score} out of 10 correct.`;
+        }
+      </script>
     </section>
-    <!-- ========================================================================== -->
   </main>
 
   <footer>
@@ -248,4 +411,3 @@
   </script>
 </body>
 </html>
-
