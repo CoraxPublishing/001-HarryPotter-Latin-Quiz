@@ -163,7 +163,7 @@
     </ul>
   </nav>
 
-  <!-- CHAPTER NAV -->
+  <!-- CHAPTER NAV (hamburger on mobile, inline on desktop) -->
   <nav class="navbar" aria-label="Perseus Chapters">
     <button class="nav-toggle" aria-expanded="false" aria-controls="chapters-menu" aria-label="Open chapters">☰ Chapters</button>
 
@@ -181,6 +181,7 @@
       <li><a href="011-PR.html">Chapter 11</a></li>
     </ul>
 
+    <!-- Prev / Home / Next row -->
     <ul class="menu">
       <li><a href="001-PR.html">⟵ Previous</a></li>
       <li><a href="../index.html">Home</a></li>
@@ -194,11 +195,12 @@
       <iframe
         width="560"
         height="315"
-        src="https://www.youtube.com/embed/REPLACE_WITH_CH2_VIDEO_ID"
+        src="https://www.youtube.com/embed/mQAn5ABPV48?list=PL4aJuD4UM-gOhnaoeEpKLNyFigG9NmyeU"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
         title="Perseus Chapter 2 Video"></iframe>
+      <!-- Replace the src above with your real Chapter 2 video ID when ready -->
     </section>
 
     <!-- QUIZ -->
@@ -209,7 +211,7 @@
         The case and number if a noun/adjective; the tense/aspect/mood/voice if a verb.
       </h4>
 
-      <!-- Replace this passage & questions with Chapter 2 content -->
+      <!-- Put your Chapter 2 passage here -->
       <div style="text-align:left">
         <br>
         <!-- Chapter 2 passage goes here -->
@@ -217,8 +219,7 @@
       </div>
 
       <form id="quizForm">
-        <!-- Copy your 10 question blocks here for Chapter 2 -->
-        <!-- Example placeholder -->
+        <!-- Ten question blocks (placeholders—replace text and answers) -->
         <div class="question">
           <p>1) …</p>
           <div class="options">
@@ -229,15 +230,105 @@
           </div>
         </div>
 
+        <div class="question">
+          <p>2) …</p>
+          <div class="options">
+            <label><input type="radio" name="q2" value="a"> A) …</label>
+            <label><input type="radio" name="q2" value="b"> B) …</label>
+            <label><input type="radio" name="q2" value="c"> C) …</label>
+            <label><input type="radio" name="q2" value="d"> D) …</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>3) …</p>
+          <div class="options">
+            <label><input type="radio" name="q3" value="a"> A) …</label>
+            <label><input type="radio" name="q3" value="b"> B) …</label>
+            <label><input type="radio" name="q3" value="c"> C) …</label>
+            <label><input type="radio" name="q3" value="d"> D) …</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>4) …</p>
+          <div class="options">
+            <label><input type="radio" name="q4" value="a"> A) …</label>
+            <label><input type="radio" name="q4" value="b"> B) …</label>
+            <label><input type="radio" name="q4" value="c"> C) …</label>
+            <label><input type="radio" name="q4" value="d"> D) …</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>5) …</p>
+          <div class="options">
+            <label><input type="radio" name="q5" value="a"> A) …</label>
+            <label><input type="radio" name="q5" value="b"> B) …</label>
+            <label><input type="radio" name="q5" value="c"> C) …</label>
+            <label><input type="radio" name="q5" value="d"> D) …</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>6) …</p>
+          <div class="options">
+            <label><input type="radio" name="q6" value="a"> A) …</label>
+            <label><input type="radio" name="q6" value="b"> B) …</label>
+            <label><input type="radio" name="q6" value="c"> C) …</label>
+            <label><input type="radio" name="q6" value="d"> D) …</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>7) …</p>
+          <div class="options">
+            <label><input type="radio" name="q7" value="a"> A) …</label>
+            <label><input type="radio" name="q7" value="b"> B) …</label>
+            <label><input type="radio" name="q7" value="c"> C) …</label>
+            <label><input type="radio" name="q7" value="d"> D) …</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>8) …</p>
+          <div class="options">
+            <label><input type="radio" name="q8" value="a"> A) …</label>
+            <label><input type="radio" name="q8" value="b"> B) …</label>
+            <label><input type="radio" name="q8" value="c"> C) …</label>
+            <label><input type="radio" name="q8" value="d"> D) …</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>9) …</p>
+          <div class="options">
+            <label><input type="radio" name="q9" value="a"> A) …</label>
+            <label><input type="radio" name="q9" value="b"> B) …</label>
+            <label><input type="radio" name="q9" value="c"> C) …</label>
+            <label><input type="radio" name="q9" value="d"> D) …</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>10) …</p>
+          <div class="options">
+            <label><input type="radio" name="q10" value="a"> A) …</label>
+            <label><input type="radio" name="q10" value="b"> B) …</label>
+            <label><input type="radio" name="q10" value="c"> C) …</label>
+            <label><input type="radio" name="q10" value="d"> D) …</label>
+          </div>
+        </div>
+
         <br>
         <button type="button" onclick="checkAnswers()">Submit</button>
         <div id="result"></div>
       </form>
 
       <script>
-        // Update the answer key for Chapter 2
+        // Update the answer key for Chapter 2 when you have it
         function checkAnswers() {
-          const answers = { q1:'a', q2:'a', q3:'c', q4:'c', q5:'c', q6:'b', q7:'b', q8:'a', q9:'a', q10:'c' };
+          const answers = { q1:'a', q2:'a', q3:'a', q4:'a', q5:'a', q6:'a', q7:'a', q8:'a', q9:'a', q10:'a' };
           let score = 0;
 
           for (let i = 1; i <= 10; i++) {
@@ -245,6 +336,7 @@
             const selected = document.querySelector(`input[name="${q}"]:checked`);
             const correct = answers[q];
 
+            // clear previous highlights
             document.querySelectorAll(`input[name="${q}"]`).forEach(input => {
               input.parentElement.style.backgroundColor = '';
             });
@@ -302,3 +394,7 @@
   </script>
 </body>
 </html>
+
+</body>
+</html>
+
