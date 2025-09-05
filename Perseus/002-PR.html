@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Perseus — Chapter 2 Quiz</title>
-  <!-- Use shared root stylesheet -->
+  <!-- Use shared root stylesheet (same as 001) -->
   <link rel="stylesheet" href="../style.css" />
 </head>
 
@@ -14,12 +14,12 @@
     <h1>Corax Publishing</h1>
   </div>
 
-  <!-- Mast Image -->
+  <!-- Mast Image (same as 001) -->
   <header>
     <img src="Images/Perseus-Logo.jpg" alt="Perseus Series Logo" />
   </header>
 
-  <!-- PRIMARY SITE NAV (identical to homepage) -->
+  <!-- PRIMARY SITE NAV (copy of 001) -->
   <nav class="navbar" aria-label="Primary">
     <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">☰ Menu</button>
 
@@ -163,7 +163,7 @@
     </ul>
   </nav>
 
-  <!-- CHAPTER NAV (hamburger on mobile, inline on desktop) -->
+  <!-- CHAPTER NAV (copy of 001, with Chapter 2 marked current) -->
   <nav class="navbar" aria-label="Perseus Chapters">
     <button class="nav-toggle" aria-expanded="false" aria-controls="chapters-menu" aria-label="Open chapters">☰ Chapters</button>
 
@@ -181,7 +181,6 @@
       <li><a href="011-PR.html">Chapter 11</a></li>
     </ul>
 
-    <!-- Prev / Home / Next row -->
     <ul class="menu">
       <li><a href="001-PR.html">⟵ Previous</a></li>
       <li><a href="../index.html">Home</a></li>
@@ -190,167 +189,22 @@
   </nav>
 
   <main>
+    <!-- ================== KEEP YOUR EXISTING CHAPTER 2 CONTENT ================== -->
+    <!-- Paste your current Chapter 2 video + passage + <form id="quizForm"> block
+         here exactly as they are now in your working 002 file. Do NOT change the text.
+         Only ensure the outer wrappers use the same classes as 001: -->
+
     <!-- Video -->
     <section class="video-section">
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/mQAn5ABPV48?list=PL4aJuD4UM-gOhnaoeEpKLNyFigG9NmyeU"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-        title="Perseus Chapter 2 Video"></iframe>
-      <!-- Replace the src above with your real Chapter 2 video ID when ready -->
+      <!-- (keep your original Chapter 2 iframe src here) -->
+      <!-- Example shape: <iframe width="560" height="315" src="YOUR-CH2-URL" ...></iframe> -->
     </section>
 
-    <!-- QUIZ -->
+    <!-- Quiz -->
     <section class="quiz-section">
-      <h1>Perseus and Medusa Quiz — Chapter Two</h1>
-      <h4>
-        Choose the literal meaning and grammatical detail of each bolded word or phrase:<br>
-        The case and number if a noun/adjective; the tense/aspect/mood/voice if a verb.
-      </h4>
-
-      <!-- Put your Chapter 2 passage here -->
-      <div style="text-align:left">
-        <br>
-        <!-- Chapter 2 passage goes here -->
-        <br><br>
-      </div>
-
-      <form id="quizForm">
-        <!-- Ten question blocks (placeholders—replace text and answers) -->
-        <div class="question">
-          <p>1) …</p>
-          <div class="options">
-            <label><input type="radio" name="q1" value="a"> A) …</label>
-            <label><input type="radio" name="q1" value="b"> B) …</label>
-            <label><input type="radio" name="q1" value="c"> C) …</label>
-            <label><input type="radio" name="q1" value="d"> D) …</label>
-          </div>
-        </div>
-
-        <div class="question">
-          <p>2) …</p>
-          <div class="options">
-            <label><input type="radio" name="q2" value="a"> A) …</label>
-            <label><input type="radio" name="q2" value="b"> B) …</label>
-            <label><input type="radio" name="q2" value="c"> C) …</label>
-            <label><input type="radio" name="q2" value="d"> D) …</label>
-          </div>
-        </div>
-
-        <div class="question">
-          <p>3) …</p>
-          <div class="options">
-            <label><input type="radio" name="q3" value="a"> A) …</label>
-            <label><input type="radio" name="q3" value="b"> B) …</label>
-            <label><input type="radio" name="q3" value="c"> C) …</label>
-            <label><input type="radio" name="q3" value="d"> D) …</label>
-          </div>
-        </div>
-
-        <div class="question">
-          <p>4) …</p>
-          <div class="options">
-            <label><input type="radio" name="q4" value="a"> A) …</label>
-            <label><input type="radio" name="q4" value="b"> B) …</label>
-            <label><input type="radio" name="q4" value="c"> C) …</label>
-            <label><input type="radio" name="q4" value="d"> D) …</label>
-          </div>
-        </div>
-
-        <div class="question">
-          <p>5) …</p>
-          <div class="options">
-            <label><input type="radio" name="q5" value="a"> A) …</label>
-            <label><input type="radio" name="q5" value="b"> B) …</label>
-            <label><input type="radio" name="q5" value="c"> C) …</label>
-            <label><input type="radio" name="q5" value="d"> D) …</label>
-          </div>
-        </div>
-
-        <div class="question">
-          <p>6) …</p>
-          <div class="options">
-            <label><input type="radio" name="q6" value="a"> A) …</label>
-            <label><input type="radio" name="q6" value="b"> B) …</label>
-            <label><input type="radio" name="q6" value="c"> C) …</label>
-            <label><input type="radio" name="q6" value="d"> D) …</label>
-          </div>
-        </div>
-
-        <div class="question">
-          <p>7) …</p>
-          <div class="options">
-            <label><input type="radio" name="q7" value="a"> A) …</label>
-            <label><input type="radio" name="q7" value="b"> B) …</label>
-            <label><input type="radio" name="q7" value="c"> C) …</label>
-            <label><input type="radio" name="q7" value="d"> D) …</label>
-          </div>
-        </div>
-
-        <div class="question">
-          <p>8) …</p>
-          <div class="options">
-            <label><input type="radio" name="q8" value="a"> A) …</label>
-            <label><input type="radio" name="q8" value="b"> B) …</label>
-            <label><input type="radio" name="q8" value="c"> C) …</label>
-            <label><input type="radio" name="q8" value="d"> D) …</label>
-          </div>
-        </div>
-
-        <div class="question">
-          <p>9) …</p>
-          <div class="options">
-            <label><input type="radio" name="q9" value="a"> A) …</label>
-            <label><input type="radio" name="q9" value="b"> B) …</label>
-            <label><input type="radio" name="q9" value="c"> C) …</label>
-            <label><input type="radio" name="q9" value="d"> D) …</label>
-          </div>
-        </div>
-
-        <div class="question">
-          <p>10) …</p>
-          <div class="options">
-            <label><input type="radio" name="q10" value="a"> A) …</label>
-            <label><input type="radio" name="q10" value="b"> B) …</label>
-            <label><input type="radio" name="q10" value="c"> C) …</label>
-            <label><input type="radio" name="q10" value="d"> D) …</label>
-          </div>
-        </div>
-
-        <br>
-        <button type="button" onclick="checkAnswers()">Submit</button>
-        <div id="result"></div>
-      </form>
-
-      <script>
-        // Update the answer key for Chapter 2 when you have it
-        function checkAnswers() {
-          const answers = { q1:'a', q2:'a', q3:'a', q4:'a', q5:'a', q6:'a', q7:'a', q8:'a', q9:'a', q10:'a' };
-          let score = 0;
-
-          for (let i = 1; i <= 10; i++) {
-            const q = `q${i}`;
-            const selected = document.querySelector(`input[name="${q}"]:checked`);
-            const correct = answers[q];
-
-            // clear previous highlights
-            document.querySelectorAll(`input[name="${q}"]`).forEach(input => {
-              input.parentElement.style.backgroundColor = '';
-            });
-
-            if (selected && selected.value === correct) score++;
-
-            const correctInput = document.querySelector(`input[name="${q}"][value="${correct}"]`);
-            if (correctInput) correctInput.parentElement.style.backgroundColor = '#d4edda';
-          }
-
-          document.getElementById('result').innerHTML = `<br><br>You got ${score} out of 10 correct.`;
-        }
-      </script>
+      <!-- PASTE your Chapter 2 passage, the 10 questions, and the checkAnswers() script here, unchanged -->
     </section>
+    <!-- ========================================================================== -->
   </main>
 
   <footer>
@@ -360,7 +214,7 @@
     </div>
   </footer>
 
-  <!-- Minimal JS to power both hamburger menus + mobile submenus -->
+  <!-- Minimal JS to power both hamburger menus + mobile submenus (same as 001) -->
   <script>
     (function () {
       function wireToggle(btnSelector, menuId) {
@@ -392,9 +246,6 @@
       });
     })();
   </script>
-</body>
-</html>
-
 </body>
 </html>
 
