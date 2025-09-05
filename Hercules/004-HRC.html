@@ -3,286 +3,256 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>004-Hercules</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Hercules — Chapter 4 Quiz</title>
+  <!-- Root-level shared stylesheet -->
+  <link rel="stylesheet" href="../style.css" />
 </head>
 
-
 <body>
-
-  <!-- Mast image -->
+  <!-- Mast Image -->
   <header>
-    <img src="Images/Hercules-Logo.jpg" alt="Company Logo" />
+    <img src="Images/Hercules-Logo.jpg" alt="Hercules Series Logo" />
   </header>
 
-<!-- Navigation Mast -->
-<nav>
-  <div>
-    <button onclick="location.href='003-HRC.html'">Previous Quiz</button>
-    <button onclick="location.href='../index.html'">Corax Publishing Home</button>
-    <button onclick="location.href='005-HRC.html'">Next Quiz</button>
-  </div>
-  <div>
-    <button onclick="location.href='001-HRC.html'">I</button>
-    <button onclick="location.href='002-HRC.html'">II</button>
-    <button onclick="location.href='003-HRC.html'">III</button>
-    <button onclick="location.href='004-HRC.html'">IV</button>
-    <button onclick="location.href='005-HRC.html'">V</button>
-    <button onclick="location.href='006-HRC.html'">VI</button>
-    <button onclick="location.href='007-HRC.html'">VII</button>
-    <button onclick="location.href='008-HRC.html'">VIII</button>
-    <button onclick="location.href='009-HRC.html'">IX</button>
-    <button onclick="location.href='010-HRC.html'">X</button>
-  </div>
+  <!-- HERCULES CHAPTER NAV -->
+  <nav class="navbar" aria-label="Hercules Chapters">
+    <button class="nav-toggle" aria-expanded="false" aria-controls="chapters-menu" aria-label="Open chapters">☰ Chapters</button>
 
-  <div>
-    <button onclick="location.href='011-HRC.html'">XI</button>
-    <button onclick="location.href='012-HRC.html'">XII</button>
-    <button onclick="location.href='013-HRC.html'">XIII</button>
-    <button onclick="location.href='014-HRC.html'">XIV</button>
-    <button onclick="location.href='015-HRC.html'">XV</button>
-    <button onclick="location.href='016-HRC.html'">XVI</button>
-    <button onclick="location.href='017-HRC.html'">XVII</button>
-    <button onclick="location.href='018-HRC.html'">XVIII</button>
-    <button onclick="location.href='019-HRC.html'">XIX</button>
-    <button onclick="location.href='020-HRC.html'">XX</button>
-  </div>   
-  
-  <div>
-    <button onclick="location.href='021-HRC.html'">XXI</button>
-    <button onclick="location.href='022-HRC.html'">XXII</button>
-    <button onclick="location.href='023-HRC.html'">XXIII</button>
-    <button onclick="location.href='024-HRC.html'">XXIV</button>
-    <button onclick="location.href='025-HRC.html'">XXV</button>
-    <button onclick="location.href='026-HRC.html'">XXVI</button>
-    <button onclick="location.href='027-HRC.html'">XXVII</button>
-    <button onclick="location.href='028-HRC.html'">XXVIII</button>
-    <button onclick="location.href='029-HRC.html'">XXIX</button>
-    <button onclick="location.href='030-HRC.html'">XXX</button>
-  </div>
+    <!-- Chapter list with <br> after each 10 for desktop wrap -->
+    <ul id="chapters-menu" class="menu" data-collapsed>
+      <li><a href="001-HRC.html">I</a></li>
+      <li><a href="002-HRC.html">II</a></li>
+      <li><a href="003-HRC.html">III</a></li>
+      <li><a href="004-HRC.html" aria-current="page">IV</a></li>
+      <li><a href="005-HRC.html">V</a></li>
+      <li><a href="006-HRC.html">VI</a></li>
+      <li><a href="007-HRC.html">VII</a></li>
+      <li><a href="008-HRC.html">VIII</a></li>
+      <li><a href="009-HRC.html">IX</a></li>
+      <li><a href="010-HRC.html">X</a></li>
+      <br>
+      <li><a href="011-HRC.html">XI</a></li>
+      <li><a href="012-HRC.html">XII</a></li>
+      <li><a href="013-HRC.html">XIII</a></li>
+      <li><a href="014-HRC.html">XIV</a></li>
+      <li><a href="015-HRC.html">XV</a></li>
+      <li><a href="016-HRC.html">XVI</a></li>
+      <li><a href="017-HRC.html">XVII</a></li>
+      <li><a href="018-HRC.html">XVIII</a></li>
+      <li><a href="019-HRC.html">XIX</a></li>
+      <li><a href="020-HRC.html">XX</a></li>
+      <br>
+      <li><a href="021-HRC.html">XXI</a></li>
+      <li><a href="022-HRC.html">XXII</a></li>
+      <li><a href="023-HRC.html">XXIII</a></li>
+      <li><a href="024-HRC.html">XXIV</a></li>
+      <li><a href="025-HRC.html">XXV</a></li>
+      <li><a href="026-HRC.html">XXVI</a></li>
+      <li><a href="027-HRC.html">XXVII</a></li>
+      <li><a href="028-HRC.html">XXVIII</a></li>
+      <li><a href="029-HRC.html">XXIX</a></li>
+      <li><a href="030-HRC.html">XXX</a></li>
+      <br>
+      <li><a href="031-HRC.html">XXXI</a></li>
+      <li><a href="032-HRC.html">XXXII</a></li>
+      <li><a href="033-HRC.html">XXXIII</a></li>
+      <li><a href="034-HRC.html">XXXIV</a></li>
+      <li><a href="035-HRC.html">XXXV</a></li>
+      <li><a href="036-HRC.html">XXXVI</a></li>
+      <li><a href="037-HRC.html">XXXVII</a></li>
+      <li><a href="038-HRC.html">XXXVIII</a></li>
+      <li><a href="039-HRC.html">XXXIX</a></li>
+      <li><a href="040-HRC.html">XL</a></li>
+      <br>
+      <li><a href="041-HRC.html">XLI</a></li>
+      <li><a href="042-HRC.html">XLII</a></li>
+      <li><a href="043-HRC.html">XLIII</a></li>
+      <li><a href="044-HRC.html">XLIV</a></li>
+      <li><a href="045-HRC.html">XLV</a></li>
+    </ul>
 
-  <div>
-    <button onclick="location.href='031-HRC.html'">XXXI</button>
-    <button onclick="location.href='032-HRC.html'">XXXII</button>
-    <button onclick="location.href='033-HRC.html'">XXXIII</button>
-    <button onclick="location.href='034-HRC.html'">XXXIV</button>
-    <button onclick="location.href='035-HRC.html'">XXXV</button>
-    <button onclick="location.href='036-HRC.html'">XXXVI</button>
-    <button onclick="location.href='037-HRC.html'">XXXVII</button>
-    <button onclick="location.href='038-HRC.html'">XXXVIII</button>
-    <button onclick="location.href='039-HRC.html'">XXXIX</button>
-    <button onclick="location.href='040-HRC.html'">XL</button>
-  </div>
-
-    <div>
-    <button onclick="location.href='041-HRC.html'">XLI</button>
-    <button onclick="location.href='042-HRC.html'">XLII</button>
-    <button onclick="location.href='043-HRC.html'">XLIII</button>
-    <button onclick="location.href='044-HRC.html'">XLIV</button>
-    <button onclick="location.href='045-HRC.html'">XLV</button>
-  </div>
-</nav>
-
+    <!-- Prev / Home / Next -->
+    <ul class="menu">
+      <li><a href="003-HRC.html">⟵ Previous</a></li>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="005-HRC.html">Next ⟶</a></li>
+    </ul>
+  </nav>
 
   <main>
-    <!-- <<video link goes here>> -->
-<section class="video-section">
-  <iframe 
-    width="560" 
-    height="315" 
-    src="https://www.youtube.com/embed/x9qs4nA4kV0" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen>
-  </iframe>
-</section>
+    <!-- VIDEO -->
+    <section class="video-section">
+      <iframe 
+        width="560" height="315"
+        src="https://www.youtube.com/embed/x9qs4nA4kV0"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </section>
 
-    
-
-                                                     <!-- Quiz code starts here Quiz code starts here Quiz code starts here -->
-
- <section class="quiz-section">
-  <h1>Hercules Quiz - Chapter Four</h1>
+    <!-- QUIZ -->
+    <section class="quiz-section">
+      <h1>Hercules Quiz - Chapter Four</h1>
       <h4>(Choose the literal meaning and grammatical detail: <br>
-    case if a noun/adjective, tense/aspect if a verb)</h4><br>
+      case if a noun/adjective, tense/aspect if a verb)</h4><br>
 
-  <div style="text-align: left;">
-  <!--This is where the dialogue goes-->
+      <div style="text-align: left;">
+        De Hercule haec etiam <i><b>inter alia</b></i> narrantur. Olim dum iter facit, in finis Aegyptiorum venit. Ibi rex <i><b>quidam</b></i>, nomine Busiris, illo tempore regnabat; hic autem vir crudelissimus homines immolare <i><b>consueverat</b></i>. Herculem igitur corripuit et <i><b>in vincula</b></i> coniecit. Tum <i><b>nuntios</b></i> dimisit et diem sacrificio edixit. Mox ea dies <i><b>appetebat</b></i>, et omnia rite parata sunt. Manus Herculis catenis ferreis vinctae sunt, et <i><b>mola salsa</b></i> in caput eius inspersa est. Mos enim erat apud antiquos salem et far capitibus victimarum imponere. Iam victima ad aram stabat; iam sacerdos cultrum <i><b>sumpserat</b></i>. Subito tamen Hercules <i><b>magno conatu</b></i> vincula <i><b>perrupit</b></i>; tum ictu sacerdotem prostravit; altero regem ipsum occidit.
+      </div>  
+      <br><br>
 
-De Hercule haec etiam <i><b>inter alia</b></i> narrantur. Olim dum iter facit, in finis Aegyptiorum venit. Ibi rex <i><b>quidam</b></i>, nomine Busiris, illo tempore regnabat; hic autem vir crudelissimus homines immolare <i><b>consueverat</b></i>. Herculem igitur corripuit et <i><b>in vincula</b></i> coniecit. Tum <i><b>nuntios</b></i> dimisit et diem sacrificio edixit. Mox ea dies <i><b>appetebat</b></i>, et omnia rite parata sunt. Manus Herculis catenis ferreis vinctae sunt, et <i><b>mola salsa</b></i>in caput eius inspersa est. Mos enim erat apud antiquos salem et far capitibus victimarum imponere. Iam victima ad aram stabat; iam sacerdos cultrum <i><b>sumpserat</b></i>. Subito tamen Hercules <i><b>magno conatu</b></i> vincula <i><b>perrupit</b></i>; tum ictu sacerdotem prostravit; altero regem ipsum occidit.
+      <form id="quizForm">
+        <div class="question">
+          <p>1. inter alia</p>
+          <div class="options">
+            <label><input type="radio" name="q1" value="a"> A) Among other things (phrase)</label>
+            <label><input type="radio" name="q1" value="b"> B) Between wings (phrase)</label>
+            <label><input type="radio" name="q1" value="c"> C) In another place (phrase)</label>
+            <label><input type="radio" name="q1" value="d"> D) Under others (phrase)</label>
+          </div>
+        </div>
 
-</div>  
-<br><br>
-  <form id="quizForm">
-    <!-- 10 Placeholder Questions -->
-    <!-- Copy & paste this question block 10 times, updating IDs and values -->
-    <!-- Start of Question Blocks -->
+        <div class="question">
+          <p>2. quidam</p>
+          <div class="options">
+            <label><input type="radio" name="q2" value="a"> A) Nobody (pronoun)</label>
+            <label><input type="radio" name="q2" value="b"> B) Anyone (pronoun)</label>
+            <label><input type="radio" name="q2" value="c"> C) A certain one, someone (pronoun)</label>
+            <label><input type="radio" name="q2" value="d"> D) Everyone (pronoun)</label>
+          </div>
+        </div>
 
-<div class="question">
-  <p>1. inter alia</p>
-  <div class="options">
-    <label><input type="radio" name="q1" value="a"> A) Among other things (phrase)</label>
-    <label><input type="radio" name="q1" value="b"> B) Between wings (phrase)</label>
-    <label><input type="radio" name="q1" value="c"> C) In another place (phrase)</label>
-    <label><input type="radio" name="q1" value="d"> D) Under others (phrase)</label>
-  </div>
-</div>
+        <div class="question">
+          <p>3. consueverat</p>
+          <div class="options">
+            <label><input type="radio" name="q3" value="a"> A) He had grown accustomed (verb, pluperfect, indicative, active)</label>
+            <label><input type="radio" name="q3" value="b"> B) He was trying (verb, imperfect, indicative, active)</label>
+            <label><input type="radio" name="q3" value="c"> C) He will have known (verb, future perfect, indicative, active)</label>
+            <label><input type="radio" name="q3" value="d"> D) He had been conquered (verb, pluperfect, indicative, passive)</label>
+          </div>
+        </div>
 
-<div class="question">
-  <p>2. quidam</p>
-  <div class="options">
-    <label><input type="radio" name="q2" value="a"> A) Nobody (pronoun)</label>
-    <label><input type="radio" name="q2" value="b"> B) Anyone (pronoun)</label>
-    <label><input type="radio" name="q2" value="c"> C) A certain one, someone (pronoun)</label>
-    <label><input type="radio" name="q2" value="d"> D) Everyone (pronoun)</label>
-  </div>
-</div>
+        <div class="question">
+          <p>4. in vincula</p>
+          <div class="options">
+            <label><input type="radio" name="q4" value="a"> A) Into chains (noun phrase, accusative, plural)</label>
+            <label><input type="radio" name="q4" value="b"> B) In chains (noun phrase, ablative, plural)</label>
+            <label><input type="radio" name="q4" value="c"> C) With chains (noun phrase, ablative, plural)</label>
+            <label><input type="radio" name="q4" value="d"> D) By chains (noun phrase, ablative, plural)</label>
+          </div>
+        </div>
 
-<div class="question">
-  <p>3. consueverat</p>
-  <div class="options">
-    <label><input type="radio" name="q3" value="a"> A) He had grown accustomed (verb, pluperfect, indicative, active)</label>
-    <label><input type="radio" name="q3" value="b"> B) He was trying (verb, imperfect, indicative, active)</label>
-    <label><input type="radio" name="q3" value="c"> C) He will have known (verb, future perfect, indicative, active)</label>
-    <label><input type="radio" name="q3" value="d"> D) He had been conquered (verb, pluperfect, indicative, passive)</label>
-  </div>
-</div>
+        <div class="question">
+          <p>5. nuntios</p>
+          <div class="options">
+            <label><input type="radio" name="q5" value="a"> A) Messages (noun, accusative, plural)</label>
+            <label><input type="radio" name="q5" value="b"> B) Messengers (noun, accusative, plural)</label>
+            <label><input type="radio" name="q5" value="c"> C) Announcements (noun, nominative, plural)</label>
+            <label><input type="radio" name="q5" value="d"> D) Herald (noun, nominative, singular)</label>
+          </div>
+        </div>
 
-<div class="question">
-  <p>4. in vincula</p>
-  <div class="options">
-    <label><input type="radio" name="q4" value="a"> A) Into chains (noun phrase, accusative, plural)</label>
-    <label><input type="radio" name="q4" value="b"> B) In chains (noun phrase, ablative, plural)</label>
-    <label><input type="radio" name="q4" value="c"> C) With chains (noun phrase, ablative, plural)</label>
-    <label><input type="radio" name="q4" value="d"> D) By chains (noun phrase, ablative, plural)</label>
-  </div>
-</div>
+        <div class="question">
+          <p>6. appetebat</p>
+          <div class="options">
+            <label><input type="radio" name="q6" value="a"> A) He was desiring (verb, imperfect, indicative, active)</label>
+            <label><input type="radio" name="q6" value="b"> B) He had desired (verb, pluperfect, indicative, active)</label>
+            <label><input type="radio" name="q6" value="c"> C) He was approaching (verb, imperfect, indicative, active)</label>
+            <label><input type="radio" name="q6" value="d"> D) He will desire (verb, future, indicative, active)</label>
+          </div>
+        </div>
 
-<div class="question">
-  <p>5. nuntios</p>
-  <div class="options">
-    <label><input type="radio" name="q5" value="a"> A) Messages (noun, accusative, plural)</label>
-    <label><input type="radio" name="q5" value="b"> B) Messengers (noun, accusative, plural)</label>
-    <label><input type="radio" name="q5" value="c"> C) Announcements (noun, nominative, plural)</label>
-    <label><input type="radio" name="q5" value="d"> D) Herald (noun, nominative, singular)</label>
-  </div>
-</div>
+        <div class="question">
+          <p>7. mola salsa</p>
+          <div class="options">
+            <label><input type="radio" name="q7" value="a"> A) Salted meal (noun phrase, nominative, singular)</label>
+            <label><input type="radio" name="q7" value="b"> B) Sacred knife (noun phrase, nominative, singular)</label>
+            <label><input type="radio" name="q7" value="c"> C) Burnt offering (noun phrase, nominative, singular)</label>
+            <label><input type="radio" name="q7" value="d"> D) Bitter water (noun phrase, nominative, singular)</label>
+          </div>
+        </div>
 
-<div class="question">
-  <p>6. appetebat</p>
-  <div class="options">
-    <label><input type="radio" name="q6" value="a"> A) He was desiring (verb, imperfect, indicative, active)</label>
-    <label><input type="radio" name="q6" value="b"> B) He had desired (verb, pluperfect, indicative, active)</label>
-    <label><input type="radio" name="q6" value="c"> C) He was approaching (verb, imperfect, indicative, active)</label>
-    <label><input type="radio" name="q6" value="d"> D) He will desire (verb, future, indicative, active)</label>
-  </div>
-</div>
+        <div class="question">
+          <p>8. sumpserat</p>
+          <div class="options">
+            <label><input type="radio" name="q8" value="a"> A) He had taken up (verb, pluperfect, indicative, active)</label>
+            <label><input type="radio" name="q8" value="b"> B) He was holding (verb, imperfect, indicative, active)</label>
+            <label><input type="radio" name="q8" value="c"> C) He has taken (verb, perfect, indicative, active)</label>
+            <label><input type="radio" name="q8" value="d"> D) He had been taken (verb, pluperfect, indicative, passive)</label>
+          </div>
+        </div>
 
-<div class="question">
-  <p>7. mola salsa</p>
-  <div class="options">
-    <label><input type="radio" name="q7" value="a"> A) Salted meal (noun phrase, nominative, singular)</label>
-    <label><input type="radio" name="q7" value="b"> B) Sacred knife (noun phrase, nominative, singular)</label>
-    <label><input type="radio" name="q7" value="c"> C) Burnt offering (noun phrase, nominative, singular)</label>
-    <label><input type="radio" name="q7" value="d"> D) Bitter water (noun phrase, nominative, singular)</label>
-  </div>
-</div>
+        <div class="question">
+          <p>9. magno conatu</p>
+          <div class="options">
+            <label><input type="radio" name="q9" value="a"> A) With great struggle/effort (noun phrase, ablative, singular)</label>
+            <label><input type="radio" name="q9" value="b"> B) Into great struggle (noun phrase, accusative, singular)</label>
+            <label><input type="radio" name="q9" value="c"> C) By great counsel (noun phrase, ablative, singular)</label>
+            <label><input type="radio" name="q9" value="d"> D) For a great struggle (noun phrase, dative, singular)</label>
+          </div>
+        </div>
 
-<div class="question">
-  <p>8. sumpserat</p>
-  <div class="options">
-    <label><input type="radio" name="q8" value="a"> A) He had taken up (verb, pluperfect, indicative, active)</label>
-    <label><input type="radio" name="q8" value="b"> B) He was holding (verb, imperfect, indicative, active)</label>
-    <label><input type="radio" name="q8" value="c"> C) He has taken (verb, perfect, indicative, active)</label>
-    <label><input type="radio" name="q8" value="d"> D) He had been taken (verb, pluperfect, indicative, passive)</label>
-  </div>
-</div>
+        <div class="question">
+          <p>10. perrupit</p>
+          <div class="options">
+            <label><input type="radio" name="q10" value="a"> A) He had broken through (verb, pluperfect, indicative, active)</label>
+            <label><input type="radio" name="q10" value="b"> B) He broke through (verb, perfect, indicative, active)</label>
+            <label><input type="radio" name="q10" value="c"> C) He will break (verb, future, indicative, active)</label>
+            <label><input type="radio" name="q10" value="d"> D) He was breaking (verb, imperfect, indicative, active)</label>
+          </div>
+        </div>
 
-<div class="question">
-  <p>9. magno conatu</p>
-  <div class="options">
-    <label><input type="radio" name="q9" value="a"> A) With great struggle/effort (noun phrase, ablative, singular)</label>
-    <label><input type="radio" name="q9" value="b"> B) Into great struggle (noun phrase, accusative, singular)</label>
-    <label><input type="radio" name="q9" value="c"> C) By great counsel (noun phrase, ablative, singular)</label>
-    <label><input type="radio" name="q9" value="d"> D) For a great struggle (noun phrase, dative, singular)</label>
-  </div>
-</div>
+        <br>
+        <button type="button" onclick="checkAnswers()">Submit</button>
+        <div id="result"></div>
+      </form>
 
-<div class="question">
-  <p>10. perrupit</p>
-  <div class="options">
-    <label><input type="radio" name="q10" value="a"> A) He had broken through (verb, pluperfect, indicative, active)</label>
-    <label><input type="radio" name="q10" value="b"> B) He broke through (verb, perfect, indicative, active)</label>
-    <label><input type="radio" name="q10" value="c"> C) He will break (verb, future, indicative, active)</label>
-    <label><input type="radio" name="q10" value="d"> D) He was breaking (verb, imperfect, indicative, active)</label>
-  </div>
-</div>
+      <script>
+        function checkAnswers() {
+          const answers = {
+            q1:'a', q2:'c', q3:'a', q4:'a', q5:'b',
+            q6:'c', q7:'a', q8:'a', q9:'a', q10:'b'
+          };
+          let score = 0;
 
+          for (let i = 1; i <= 10; i++) {
+            const qName = `q${i}`;
+            const selected = document.querySelector(`input[name="${qName}"]:checked`);
+            const correctValue = answers[qName];
 
-    <!-- End of Question Blocks -->
+            // clear any previous highlight
+            document.querySelectorAll(`input[name="${qName}"]`).forEach(input => {
+              input.parentElement.style.backgroundColor = '';
+            });
 
-    <br>
-    <button type="button" onclick="checkAnswers()">Submit</button>
-    <div id="result"></div>
-  </form>
+            if (selected && selected.value === correctValue) score++;
 
-  <!-- JavaScript to check answers and highlight correct ones -->
-  <script>
-    function checkAnswers() {
-      const answers = {
-
-    q1: 'a',
-    q2: 'c',
-    q3: 'a',
-    q4: 'a',
-    q5: 'b',
-    q6: 'c',
-    q7: 'a',
-    q8: 'a',
-    q9: 'a',
-    q10: 'b'
-      };
-
-      let score = 0;
-
-      for (let i = 1; i <= 10; i++) {
-        const qName = `q${i}`;
-        const selected = document.querySelector(`input[name="${qName}"]:checked`);
-        const correctValue = answers[qName];
-
-        const labels = document.querySelectorAll(`input[name="${qName}"]`);
-
-        labels.forEach(input => {
-          const parentLabel = input.parentElement;
-          parentLabel.style.backgroundColor = '';
-        });
-
-        if (selected) {
-          if (selected.value === correctValue) {
-            score++;
-          } else {
-            // highlight correct answer
+            // always highlight the correct answer
             const correctInput = document.querySelector(`input[name="${qName}"][value="${correctValue}"]`);
             if (correctInput) {
-              correctInput.parentElement.style.backgroundColor = '#d4edda'; // light green
+              correctInput.parentElement.style.backgroundColor = '#d4edda';
             }
           }
-        } else {
-          // still highlight correct even if unanswered
-          const correctInput = document.querySelector(`input[name="${qName}"][value="${correctValue}"]`);
-          if (correctInput) {
-            correctInput.parentElement.style.backgroundColor = '#d4edda';
-          }
+
+          document.getElementById('result').innerHTML = `<br><br>You got ${score} out of 10 correct.`;
         }
-      }
-
-      document.getElementById('result').innerHTML = `<br><br>You got ${score} out of 10 correct.`;
-    }
-  </script>
-</section>
-
-                                           <!-- <<Quiz code ends here Quiz code ends here Quiz code ends here Quiz code ends here>> -->
+      </script>
+    </section>
   </main>
 
+  <!-- Chapters hamburger for mobile -->
+  <script>
+    (function () {
+      const btn = document.querySelector('.navbar[aria-label="Hercules Chapters"] .nav-toggle');
+      const menu = document.getElementById('chapters-menu');
+      if (!btn || !menu) return;
+      btn.addEventListener('click', () => {
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        menu.toggleAttribute('data-collapsed');
+      });
+    })();
+  </script>
 </body>
 </html>
