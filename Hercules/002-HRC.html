@@ -3,283 +3,432 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>002-Hercules</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Hercules — Chapter 2 Quiz</title>
+  <!-- Use shared root stylesheet -->
+  <link rel="stylesheet" href="../style.css" />
 </head>
 
-
 <body>
+  <!-- (Optional) Site Title -->
+  <div class="site-title">
+    <h1>Corax Publishing</h1>
+  </div>
 
-  <!-- Mast image -->
+  <!-- Mast Image -->
   <header>
-    <img src="Images/Hercules-Logo.jpg" alt="Company Logo" />
+    <img src="Images/Hercules-Logo.jpg" alt="Hercules Series Logo" />
   </header>
 
-<!-- Navigation Mast -->
-<nav>
-  <div>
-    <button onclick="location.href='001-HRC.html'">Previous Quiz</button>
-    <button onclick="location.href='../index.html'">Corax Publishing Home</button>
-    <button onclick="location.href='003-HRC.html'">Next Quiz</button>
-  </div>
-  <div>
-    <button onclick="location.href='001-HRC.html'">I</button>
-    <button onclick="location.href='002-HRC.html'">II</button>
-    <button onclick="location.href='003-HRC.html'">III</button>
-    <button onclick="location.href='004-HRC.html'">IV</button>
-    <button onclick="location.href='005-HRC.html'">V</button>
-    <button onclick="location.href='006-HRC.html'">VI</button>
-    <button onclick="location.href='007-HRC.html'">VII</button>
-    <button onclick="location.href='008-HRC.html'">VIII</button>
-    <button onclick="location.href='009-HRC.html'">IX</button>
-    <button onclick="location.href='010-HRC.html'">X</button>
-  </div>
+  <!-- PRIMARY SITE NAV (same as other pages) -->
+  <nav class="navbar" aria-label="Primary">
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">☰ Menu</button>
 
-  <div>
-    <button onclick="location.href='011-HRC.html'">XI</button>
-    <button onclick="location.href='012-HRC.html'">XII</button>
-    <button onclick="location.href='013-HRC.html'">XIII</button>
-    <button onclick="location.href='014-HRC.html'">XIV</button>
-    <button onclick="location.href='015-HRC.html'">XV</button>
-    <button onclick="location.href='016-HRC.html'">XVI</button>
-    <button onclick="location.href='017-HRC.html'">XVII</button>
-    <button onclick="location.href='018-HRC.html'">XVIII</button>
-    <button onclick="location.href='019-HRC.html'">XIX</button>
-    <button onclick="location.href='020-HRC.html'">XX</button>
-  </div>   
-  
-  <div>
-    <button onclick="location.href='021-HRC.html'">XXI</button>
-    <button onclick="location.href='022-HRC.html'">XXII</button>
-    <button onclick="location.href='023-HRC.html'">XXIII</button>
-    <button onclick="location.href='024-HRC.html'">XXIV</button>
-    <button onclick="location.href='025-HRC.html'">XXV</button>
-    <button onclick="location.href='026-HRC.html'">XXVI</button>
-    <button onclick="location.href='027-HRC.html'">XXVII</button>
-    <button onclick="location.href='028-HRC.html'">XXVIII</button>
-    <button onclick="location.href='029-HRC.html'">XXIX</button>
-    <button onclick="location.href='030-HRC.html'">XXX</button>
-  </div>
+    <ul id="nav-menu" class="menu" data-collapsed>
+      <!-- ABOUT -->
+      <li class="has-submenu">
+        <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-about">ABOUT</button>
+        <ul id="submenu-about" class="submenu" data-collapsed>
+          <li><a href="../index.html#about">Overview</a></li>
+          <li><a href="../mission.html">Mission</a></li>
+          <li><a href="../offers.html">Offers</a></li>
+          <li><a href="../FAQ.html">FAQ</a></li>
+        </ul>
+      </li>
 
-  <div>
-    <button onclick="location.href='031-HRC.html'">XXXI</button>
-    <button onclick="location.href='032-HRC.html'">XXXII</button>
-    <button onclick="location.href='033-HRC.html'">XXXIII</button>
-    <button onclick="location.href='034-HRC.html'">XXXIV</button>
-    <button onclick="location.href='035-HRC.html'">XXXV</button>
-    <button onclick="location.href='036-HRC.html'">XXXVI</button>
-    <button onclick="location.href='037-HRC.html'">XXXVII</button>
-    <button onclick="location.href='038-HRC.html'">XXXVIII</button>
-    <button onclick="location.href='039-HRC.html'">XXXIX</button>
-    <button onclick="location.href='040-HRC.html'">XL</button>
-  </div>
+      <!-- LATIN -->
+      <li class="has-submenu">
+        <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-latin">LATIN</button>
+        <ul id="submenu-latin" class="submenu" data-collapsed>
+          <li class="has-submenu">
+            <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-latin-fabulae">Fabulae Faciles</button>
+            <ul id="submenu-latin-fabulae" class="submenu" data-collapsed>
+              <li><a href="../Perseus/001-PR.html">Perseus and Medusa</a></li>
+              <li><a href="../Hercules/001-HRC.html">Hercules</a></li>
+              <li><a href="../Jason/Construction.html">Golden Fleece</a></li>
+            </ul>
+          </li>
 
-    <div>
-    <button onclick="location.href='041-HRC.html'">XLI</button>
-    <button onclick="location.href='042-HRC.html'">XLII</button>
-    <button onclick="location.href='043-HRC.html'">XLIII</button>
-    <button onclick="location.href='044-HRC.html'">XLIV</button>
-    <button onclick="location.href='045-HRC.html'">XLV</button>
-  </div>
-</nav>
+          <li class="has-submenu">
+            <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-latin-hp">Harry Potter</button>
+            <ul id="submenu-latin-hp" class="submenu" data-collapsed>
+              <li><a href="../Harry-Potter-1/Construction.html">Philosophi Lapis</a></li>
+              <li><a href="../Harry-Potter-2/Construction.html">Camera Secretorum</a></li>
+            </ul>
+          </li>
 
+          <li class="has-submenu">
+            <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-latin-novels">Novels</button>
+            <ul id="submenu-latin-novels" class="submenu" data-collapsed>
+              <li><a href="../Hobbit/Construction.html">Hobbitus Ille</a></li>
+              <li><a href="../Winnie/Construction.html">Winnie Ille Pu</a></li>
+              <li><a href="../Regulus/Construction.html">Regulus</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ENGLISH -->
+      <li class="has-submenu">
+        <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-english">ENGLISH</button>
+        <ul id="submenu-english" class="submenu" data-collapsed>
+          <li class="has-submenu">
+            <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-eng-grammar">Grammar</button>
+            <ul id="submenu-eng-grammar" class="submenu" data-collapsed>
+              <li><a href="../Construction.html">Basic Concepts</a></li>
+              <li><a href="../Construction.html">Refined Concepts</a></li>
+              <li><a href="../Construction.html">Punctuation</a></li>
+            </ul>
+          </li>
+
+          <li class="has-submenu">
+            <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-eng-writing">Writing</button>
+            <ul id="submenu-eng-writing" class="submenu" data-collapsed>
+              <li><a href="../Construction.html">Paragraphs</a></li>
+              <li><a href="../Construction.html">Short Fiction</a></li>
+              <li><a href="../Construction.html">Essays</a></li>
+            </ul>
+          </li>
+
+          <li class="has-submenu">
+            <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-eng-stories">Short Stories</button>
+            <ul id="submenu-eng-stories" class="submenu" data-collapsed>
+              <li><a href="../Construction.html">Edgar Allan Poe</a></li>
+              <li><a href="../Construction.html">Hemingway</a></li>
+              <li><a href="../Construction.html">Chekhov</a></li>
+            </ul>
+          </li>
+
+          <li class="has-submenu">
+            <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-eng-poetry">Poetry</button>
+            <ul id="submenu-eng-poetry" class="submenu" data-collapsed>
+              <li><a href="../Construction.html">Epic</a></li>
+              <li><a href="../Construction.html">Haiku</a></li>
+              <li><a href="../Construction.html">Free Verse</a></li>
+              <li><a href="../Construction.html">Form Poetry</a></li>
+              <li><a href="../Construction.html">Elegy</a></li>
+              <li><a href="../Construction.html">Sonnets</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- BOOKSTORE -->
+      <li class="has-submenu">
+        <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-store">BOOKSTORE</button>
+        <ul id="submenu-store" class="submenu" data-collapsed>
+          <li class="has-submenu">
+            <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-store-latin">Latin</button>
+            <ul id="submenu-store-latin" class="submenu" data-collapsed>
+              <li><a href="https://www.amazon.com/Myth-Perseus-Latin-English-ebook/dp/B0DG62YPK1/">Perseus</a></li>
+              <li><a href="../Construction.html">Hercules</a></li>
+              <li><a href="../Construction.html">Golden Fleece</a></li>
+            </ul>
+          </li>
+          <li class="has-submenu">
+            <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-store-english">English</button>
+            <ul id="submenu-store-english" class="submenu" data-collapsed>
+              <li><a href="https://www.amazon.com/Esthers-Descent-Sisters-Myths-Levant-ebook/dp/B078RH35GW/">Esther's Descent</a></li>
+              <li><a href="https://www.amazon.com/gp/product/B0B2FPMT36/">Caravanserai of Jaffa</a></li>
+              <li><a href="https://www.amazon.com/Chosen-One-Testament-First-Office-ebook/dp/B08M66FFGR/">The Chosen One</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- CONTACTS -->
+      <li class="has-submenu">
+        <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-contacts">CONTACTS</button>
+        <ul id="submenu-contacts" class="submenu" data-collapsed>
+          <li class="has-submenu">
+            <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-support">Contact and Support</button>
+            <ul id="submenu-support" class="submenu" data-collapsed>
+              <li><a href="../email.html">Email</a></li>
+              <li><a href="../contact.html">Contact Form</a></li>
+              <li><a href="../newsletter.html">Newsletter</a></li>
+              <li><a href="../patreon.html">Patreon</a></li>
+            </ul>
+          </li>
+          <li class="has-submenu">
+            <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-social">Social Media</button>
+            <ul id="submenu-social" class="submenu icons" data-collapsed>
+              <li><a href="https://www.youtube.com/@Latin_Comics/playlists" aria-label="YouTube"><img src="../Images/youtube.png" alt="YouTube" width="20" height="20"></a></li>
+              <li><a href="https://www.facebook.com/p/Latin-Comics-61557991202581/" aria-label="Facebook"><img src="../Images/Facebook.png" alt="Facebook" width="20" height="20"></a></li>
+              <li><a href="https://www.instagram.com/paulrqps/" aria-label="Instagram"><img src="../Images/instagram.png" alt="Instagram" width="20" height="20"></a></li>
+              <li><a href="https://x.com/SklDante" aria-label="Twitter"><img src="../Images/twitter.png" alt="Twitter" width="20" height="20"></a></li>
+              <li><a href="https://www.tiktok.com/@latincomics" aria-label="TikTok"><img src="../Images/tiktok.png" alt="TikTok" width="20" height="20"></a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- HERCULES CHAPTER NAV -->
+  <nav class="navbar" aria-label="Hercules Chapters">
+    <button class="nav-toggle" aria-expanded="false" aria-controls="chapters-menu" aria-label="Open chapters">☰ Chapters</button>
+
+    <!-- wrap on desktop + <br> separators as you liked -->
+    <ul id="chapters-menu" class="menu" data-collapsed style="flex-wrap:wrap">
+      <li><a href="001-HRC.html">I</a></li>
+      <li><a href="002-HRC.html" aria-current="page">II</a></li>
+      <li><a href="003-HRC.html">III</a></li>
+      <li><a href="004-HRC.html">IV</a></li>
+      <li><a href="005-HRC.html">V</a></li>
+      <li><a href="006-HRC.html">VI</a></li>
+      <li><a href="007-HRC.html">VII</a></li>
+      <li><a href="008-HRC.html">VIII</a></li>
+      <li><a href="009-HRC.html">IX</a></li>
+      <li><a href="010-HRC.html">X</a></li>
+      <br>
+      <li><a href="011-HRC.html">XI</a></li>
+      <li><a href="012-HRC.html">XII</a></li>
+      <li><a href="013-HRC.html">XIII</a></li>
+      <li><a href="014-HRC.html">XIV</a></li>
+      <li><a href="015-HRC.html">XV</a></li>
+      <li><a href="016-HRC.html">XVI</a></li>
+      <li><a href="017-HRC.html">XVII</a></li>
+      <li><a href="018-HRC.html">XVIII</a></li>
+      <li><a href="019-HRC.html">XIX</a></li>
+      <li><a href="020-HRC.html">XX</a></li>
+      <br>
+      <li><a href="031-HRC.html">XXXI</a></li>
+      <li><a href="032-HRC.html">XXXII</a></li>
+      <li><a href="033-HRC.html">XXXIII</a></li>
+      <li><a href="034-HRC.html">XXXIV</a></li>
+      <li><a href="035-HRC.html">XXXV</a></li>
+      <li><a href="036-HRC.html">XXXVI</a></li>
+      <li><a href="037-HRC.html">XXXVII</a></li>
+      <li><a href="038-HRC.html">XXXVIII</a></li>
+      <li><a href="039-HRC.html">XXXIX</a></li>
+      <li><a href="040-HRC.html">XL</a></li>
+      <br>
+      <li><a href="021-HRC.html">XXI</a></li>
+      <li><a href="022-HRC.html">XXII</a></li>
+      <li><a href="023-HRC.html">XXIII</a></li>
+      <li><a href="024-HRC.html">XXIV</a></li>
+      <li><a href="025-HRC.html">XXV</a></li>
+      <li><a href="026-HRC.html">XXVI</a></li>
+      <li><a href="027-HRC.html">XXVII</a></li>
+      <li><a href="028-HRC.html">XXVIII</a></li>
+      <li><a href="029-HRC.html">XXIX</a></li>
+      <li><a href="030-HRC.html">XXX</a></li>
+      <br>
+      <li><a href="041-HRC.html">XLI</a></li>
+      <li><a href="042-HRC.html">XLII</a></li>
+      <li><a href="043-HRC.html">XLIII</a></li>
+      <li><a href="044-HRC.html">XLIV</a></li>
+      <li><a href="045-HRC.html">XLV</a></li>
+    </ul>
+
+    <!-- Prev / Home / Next row -->
+    <ul class="menu">
+      <li><a href="001-HRC.html">⟵ Previous</a></li>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="003-HRC.html">Next ⟶</a></li>
+    </ul>
+  </nav>
 
   <main>
-    <!-- <<video link goes here>> -->
-<section class="video-section">
-  <iframe 
-    width="560" 
-    height="315" 
-    src="https://www.youtube.com/embed/n8aBh6OId78" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen>
-  </iframe>
-</section>
+    <!-- YOUR VIDEO SECTION -->
+    <section class="video-section">
+      <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/n8aBh6OId78" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </section>
 
-    
-
-                                                     <!-- Quiz code starts here Quiz code starts here Quiz code starts here -->
-
- <section class="quiz-section">
-  <h1>Hercules Quiz - Chapter Two</h1>
+    <!-- YOUR QUIZ SECTION -->
+    <section class="quiz-section">
+      <h1>Hercules Quiz - Chapter Two</h1>
       <h4>(Choose the literal meaning and grammatical detail: <br>
-    case if a noun/adjective, tense/aspect if a verb)</h4><br>
+      case if a noun/adjective, tense/aspect if a verb)</h4><br>
 
-  <div style="text-align: left;">
-  <!--This is where the dialogue goes-->
+      <div style="text-align: left;">
+        Iphicles, frater Herculis, magna voce exclamavit; sed Hercules ipse, fortissimus puer, <i><b>haudquaquam</b></i> territus est. Parvis manibus serpentis statim <i><b>prehendit</b></i>, et colla earum magna vi compressit. <i><b>Tali modo</b></i> serpentes a puero interfectae sunt. Alcmena autem, mater puerorum, clamorem <i><b>audiverat</b></i>, et maritum suum <i><b>e somno</b></i> excitaverat. Ille lumen accendit et gladium suum <i><b>rapuit</b></i>; tum ad pueros <i><b>properabat</b></i>, sed ubi ad locum venit, <i><b>rem miram</b></i> vidit, Hercules enim <i><b>ridebat</b></i> et serpentis mortuas <i><b>monstrabat</b></i>.
+      </div>  
+      <br><br>
 
-Iphicles, frater Herculis, magna voce exclamavit; sed Hercules ipse, fortissimus puer, <i><b>haudquaquam</b></i> territus est. Parvis manibus serpentis statim <i><b>prehendit</b></i>, et colla earum magna vi compressit. <i><b>Tali modo</b></i> serpentes a puero interfectae sunt. Alcmena autem, mater puerorum, clamorem <i><b>audiverat</b></i>, et maritum suum <i><b>e somno</b></i> excitaverat. Ille lumen accendit et gladium suum <i><b>rapuit</b></i>; tum ad pueros <i><b>properabat</b></i>, sed ubi ad locum venit, <i><b>rem miram</b></i> vidit, Hercules enim <i><b>ridebat</b></i> et serpentis mortuas <i><b>monstrabat</b></i>.
-  </div>  
-<br><br>
-  <form id="quizForm">
-    <!-- 10 Placeholder Questions -->
-    <!-- Copy & paste this question block 10 times, updating IDs and values -->
-    <!-- Start of Question Blocks -->
- <div class="question">
-  <p>1. haudquaquam</p>
-  <div class="options">
-    <label><input type="radio" name="q1" value="a"> A) Very much (adverb)</label>
-    <label><input type="radio" name="q1" value="b"> B) Nowhere (adverb)</label>
-    <label><input type="radio" name="q1" value="c"> C) Nothing (noun, nominative, singular)</label>
-    <label><input type="radio" name="q1" value="d"> D) Not at all (adverb)</label>
-  </div>
-</div>
+      <form id="quizForm">
+        <div class="question">
+          <p>1. haudquaquam</p>
+          <div class="options">
+            <label><input type="radio" name="q1" value="a"> A) Very much (adverb)</label>
+            <label><input type="radio" name="q1" value="b"> B) Nowhere (adverb)</label>
+            <label><input type="radio" name="q1" value="c"> C) Nothing (noun, nominative, singular)</label>
+            <label><input type="radio" name="q1" value="d"> D) Not at all (adverb)</label>
+          </div>
+        </div>
 
-<div class="question">
-  <p>2. prehendit</p>
-  <div class="options">
-    <label><input type="radio" name="q2" value="a"> A) He will grasp (verb, future, indicative, active)</label>
-    <label><input type="radio" name="q2" value="b"> B) He was grasping (verb, imperfect, indicative, active)</label>
-    <label><input type="radio" name="q2" value="c"> C) He grasped (verb, perfect, indicative, active)</label>
-    <label><input type="radio" name="q2" value="d"> D) He is grasped (verb, present, indicative, passive)</label>
-  </div>
-</div>
+        <div class="question">
+          <p>2. prehendit</p>
+          <div class="options">
+            <label><input type="radio" name="q2" value="a"> A) He will grasp (verb, future, indicative, active)</label>
+            <label><input type="radio" name="q2" value="b"> B) He was grasping (verb, imperfect, indicative, active)</label>
+            <label><input type="radio" name="q2" value="c"> C) He grasped (verb, perfect, indicative, active)</label>
+            <label><input type="radio" name="q2" value="d"> D) He is grasped (verb, present, indicative, passive)</label>
+          </div>
+        </div>
 
-<div class="question">
-  <p>3. tali modo</p>
-  <div class="options">
-    <label><input type="radio" name="q3" value="a"> A) In such a way (phrase, ablative of manner)</label>
-    <label><input type="radio" name="q3" value="b"> B) At that time (phrase, temporal clause)</label>
-    <label><input type="radio" name="q3" value="c"> C) By great chance (phrase, ablative of means)</label>
-    <label><input type="radio" name="q3" value="d"> D) With much effort (phrase, ablative of manner)</label>
-  </div>
-</div>
+        <div class="question">
+          <p>3. tali modo</p>
+          <div class="options">
+            <label><input type="radio" name="q3" value="a"> A) In such a way (phrase, ablative of manner)</label>
+            <label><input type="radio" name="q3" value="b"> B) At that time (phrase, temporal clause)</label>
+            <label><input type="radio" name="q3" value="c"> C) By great chance (phrase, ablative of means)</label>
+            <label><input type="radio" name="q3" value="d"> D) With much effort (phrase, ablative of manner)</label>
+          </div>
+        </div>
 
-<div class="question">
-  <p>4. audiverat</p>
-  <div class="options">
-    <label><input type="radio" name="q4" value="a"> A) She hears (verb, present, indicative, active)</label>
-    <label><input type="radio" name="q4" value="b"> B) She was hearing (verb, imperfect, indicative, active)</label>
-    <label><input type="radio" name="q4" value="c"> C) She had heard (verb, pluperfect, indicative, active)</label>
-    <label><input type="radio" name="q4" value="d"> D) She is heard (verb, present, indicative, passive)</label>
-  </div>
-</div>
+        <div class="question">
+          <p>4. audiverat</p>
+          <div class="options">
+            <label><input type="radio" name="q4" value="a"> A) She hears (verb, present, indicative, active)</label>
+            <label><input type="radio" name="q4" value="b"> B) She was hearing (verb, imperfect, indicative, active)</label>
+            <label><input type="radio" name="q4" value="c"> C) She had heard (verb, pluperfect, indicative, active)</label>
+            <label><input type="radio" name="q4" value="d"> D) She is heard (verb, present, indicative, passive)</label>
+          </div>
+        </div>
 
-<div class="question">
-  <p>5. e somno</p>
-  <div class="options">
-    <label><input type="radio" name="q5" value="a"> A) In sleep (phrase, ablative of place)</label>
-    <label><input type="radio" name="q5" value="b"> B) Toward sleep (phrase, accusative of motion)</label>
-    <label><input type="radio" name="q5" value="c"> C) From sleep (phrase, ablative of separation)</label>
-    <label><input type="radio" name="q5" value="d"> D) For sleep (phrase, dative of purpose)</label>
-  </div>
-</div>
+        <div class="question">
+          <p>5. e somno</p>
+          <div class="options">
+            <label><input type="radio" name="q5" value="a"> A) In sleep (phrase, ablative of place)</label>
+            <label><input type="radio" name="q5" value="b"> B) Toward sleep (phrase, accusative of motion)</label>
+            <label><input type="radio" name="q5" value="c"> C) From sleep (phrase, ablative of separation)</label>
+            <label><input type="radio" name="q5" value="d"> D) For sleep (phrase, dative of purpose)</label>
+          </div>
+        </div>
 
-<div class="question">
-  <p>6. rapuit</p>
-  <div class="options">
-    <label><input type="radio" name="q6" value="a"> A) He seized (verb, perfect, indicative, active)</label>
-    <label><input type="radio" name="q6" value="b"> B) He was seized (verb, perfect, indicative, passive)</label>
-    <label><input type="radio" name="q6" value="c"> C) He will seize (verb, future, indicative, active)</label>
-    <label><input type="radio" name="q6" value="d"> D) He is seizing (verb, present, indicative, active)</label>
-  </div>
-</div>
+        <div class="question">
+          <p>6. rapuit</p>
+          <div class="options">
+            <label><input type="radio" name="q6" value="a"> A) He seized (verb, perfect, indicative, active)</label>
+            <label><input type="radio" name="q6" value="b"> B) He was seized (verb, perfect, indicative, passive)</label>
+            <label><input type="radio" name="q6" value="c"> C) He will seize (verb, future, indicative, active)</label>
+            <label><input type="radio" name="q6" value="d"> D) He is seizing (verb, present, indicative, active)</label>
+          </div>
+        </div>
 
-<div class="question">
-  <p>7. properabat</p>
-  <div class="options">
-    <label><input type="radio" name="q7" value="a"> A) He hurried (verb, perfect, indicative, active)</label>
-    <label><input type="radio" name="q7" value="b"> B) He is hurried (verb, present, indicative, passive)</label>
-    <label><input type="radio" name="q7" value="c"> C) He was hurrying (verb, imperfect, indicative, active)</label>
-    <label><input type="radio" name="q7" value="d"> D) He hurries (verb, present, indicative, active)</label>
-  </div>
-</div>
+        <div class="question">
+          <p>7. properabat</p>
+          <div class="options">
+            <label><input type="radio" name="q7" value="a"> A) He hurried (verb, perfect, indicative, active)</label>
+            <label><input type="radio" name="q7" value="b"> B) He is hurried (verb, present, indicative, passive)</label>
+            <label><input type="radio" name="q7" value="c"> C) He was hurrying (verb, imperfect, indicative, active)</label>
+            <label><input type="radio" name="q7" value="d"> D) He hurries (verb, present, indicative, active)</label>
+          </div>
+        </div>
 
-<div class="question">
-  <p>8. rem miram</p>
-  <div class="options">
-    <label><input type="radio" name="q8" value="a"> A) A terrible thing (noun phrase, accusative, singular)</label>
-    <label><input type="radio" name="q8" value="b"> B) A marvelous thing (noun phrase, accusative, singular)</label>
-    <label><input type="radio" name="q8" value="c"> C) A marvelous man (noun phrase, nominative, singular)</label>
-    <label><input type="radio" name="q8" value="d"> D) A strange city (noun phrase, accusative, singular)</label>
-  </div>
-</div>
+        <div class="question">
+          <p>8. rem miram</p>
+          <div class="options">
+            <label><input type="radio" name="q8" value="a"> A) A terrible thing (noun phrase, accusative, singular)</label>
+            <label><input type="radio" name="q8" value="b"> B) A marvelous thing (noun phrase, accusative, singular)</label>
+            <label><input type="radio" name="q8" value="c"> C) A marvelous man (noun phrase, nominative, singular)</label>
+            <label><input type="radio" name="q8" value="d"> D) A strange city (noun phrase, accusative, singular)</label>
+          </div>
+        </div>
 
-<div class="question">
-  <p>9. ridebat</p>
-  <div class="options">
-    <label><input type="radio" name="q9" value="a"> A) He laughs (verb, present, indicative, active)</label>
-    <label><input type="radio" name="q9" value="b"> B) He was laughing (verb, imperfect, indicative, active)</label>
-    <label><input type="radio" name="q9" value="c"> C) He is laughed at (verb, present, indicative, passive)</label>
-    <label><input type="radio" name="q9" value="d"> D) He laughed (verb, perfect, indicative, active)</label>
-  </div>
-</div>
+        <div class="question">
+          <p>9. ridebat</p>
+          <div class="options">
+            <label><input type="radio" name="q9" value="a"> A) He laughs (verb, present, indicative, active)</label>
+            <label><input type="radio" name="q9" value="b"> B) He was laughing (verb, imperfect, indicative, active)</label>
+            <label><input type="radio" name="q9" value="c"> C) He is laughed at (verb, present, indicative, passive)</label>
+            <label><input type="radio" name="q9" value="d"> D) He laughed (verb, perfect, indicative, active)</label>
+          </div>
+        </div>
 
-<div class="question">
-  <p>10. monstrabat</p>
-  <div class="options">
-    <label><input type="radio" name="q10" value="a"> A) He was shown (verb, imperfect, indicative, passive)</label>
-    <label><input type="radio" name="q10" value="b"> B) He was showing (verb, imperfect, indicative, active)</label>
-    <label><input type="radio" name="q10" value="c"> C) He shows (verb, present, indicative, active)</label>
-    <label><input type="radio" name="q10" value="d"> D) He showed (verb, perfect, indicative, active)</label>
-  </div>
-</div>
+        <div class="question">
+          <p>10. monstrabat</p>
+          <div class="options">
+            <label><input type="radio" name="q10" value="a"> A) He was shown (verb, imperfect, indicative, passive)</label>
+            <label><input type="radio" name="q10" value="b"> B) He was showing (verb, imperfect, indicative, active)</label>
+            <label><input type="radio" name="q10" value="c"> C) He shows (verb, present, indicative, active)</label>
+            <label><input type="radio" name="q10" value="d"> D) He showed (verb, perfect, indicative, active)</label>
+          </div>
+        </div>
 
+        <br>
+        <button type="button" onclick="checkAnswers()">Submit</button>
+        <div id="result"></div>
+      </form>
 
-    <!-- End of Question Blocks -->
+      <script>
+        function checkAnswers() {
+          const answers = {
+            q1:'d', q2:'c', q3:'a', q4:'c', q5:'c',
+            q6:'a', q7:'c', q8:'b', q9:'b', q10:'b'
+          };
+          let score = 0;
 
-    <br>
-    <button type="button" onclick="checkAnswers()">Submit</button>
-    <div id="result"></div>
-  </form>
+          for (let i = 1; i <= 10; i++) {
+            const qName = `q${i}`;
+            const selected = document.querySelector(`input[name="${qName}"]:checked`);
+            const correctValue = answers[qName];
 
-  <!-- JavaScript to check answers and highlight correct ones -->
-  <script>
-    function checkAnswers() {
-      const answers = {
-q1: 'd',
-q2: 'c',
-q3: 'a',
-q4: 'c',
-q5: 'c',
-q6: 'a',
-q7: 'c',
-q8: 'b',
-q9: 'b',
-q10: 'b'
-      };
+            document.querySelectorAll(`input[name="${qName}"]`).forEach(input => {
+              input.parentElement.style.backgroundColor = '';
+            });
 
-      let score = 0;
+            if (selected && selected.value === correctValue) {
+              score++;
+            }
 
-      for (let i = 1; i <= 10; i++) {
-        const qName = `q${i}`;
-        const selected = document.querySelector(`input[name="${qName}"]:checked`);
-        const correctValue = answers[qName];
-
-        const labels = document.querySelectorAll(`input[name="${qName}"]`);
-
-        labels.forEach(input => {
-          const parentLabel = input.parentElement;
-          parentLabel.style.backgroundColor = '';
-        });
-
-        if (selected) {
-          if (selected.value === correctValue) {
-            score++;
-          } else {
-            // highlight correct answer
             const correctInput = document.querySelector(`input[name="${qName}"][value="${correctValue}"]`);
             if (correctInput) {
               correctInput.parentElement.style.backgroundColor = '#d4edda'; // light green
             }
           }
-        } else {
-          // still highlight correct even if unanswered
-          const correctInput = document.querySelector(`input[name="${qName}"][value="${correctValue}"]`);
-          if (correctInput) {
-            correctInput.parentElement.style.backgroundColor = '#d4edda';
-          }
+
+          document.getElementById('result').innerHTML = `<br><br>You got ${score} out of 10 correct.`;
         }
-      }
-
-      document.getElementById('result').innerHTML = `<br><br>You got ${score} out of 10 correct.`;
-    }
-  </script>
-</section>
-
-                                           <!-- <<Quiz code ends here Quiz code ends here Quiz code ends here Quiz code ends here>> -->
+      </script>
+    </section>
   </main>
 
+  <footer>
+    <hr />
+    <div class="footer-content">
+      <p>&copy; 2025 Corax Publishing. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Minimal JS to power both hamburger menus + mobile submenus -->
+  <script>
+    (function () {
+      function wireToggle(btnSelector, menuId) {
+        const btn = document.querySelector(btnSelector);
+        const menu = document.getElementById(menuId);
+        if (!btn || !menu) return;
+        btn.addEventListener('click', () => {
+          const open = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', String(!open));
+          menu.toggleAttribute('data-collapsed');
+        });
+      }
+
+      // Primary site nav
+      wireToggle('.navbar[aria-label="Primary"] .nav-toggle', 'nav-menu');
+
+      // Chapters nav
+      wireToggle('.navbar[aria-label="Hercules Chapters"] .nav-toggle', 'chapters-menu');
+
+      // Mobile accordion toggles (for all submenus)
+      document.addEventListener('click', (e) => {
+        const btn = e.target.closest('.submenu-toggle');
+        if (!btn) return;
+        const submenu = document.getElementById(btn.getAttribute('aria-controls'));
+        if (!submenu) return;
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        submenu.toggleAttribute('data-collapsed');
+      });
+    })();
+  </script>
 </body>
 </html>
